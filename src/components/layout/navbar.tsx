@@ -1,10 +1,11 @@
+
 "use client";
 
 import Link from 'next/link';
 import { useState } from 'react';
 import { Menu, X, Briefcase, User, BrainCircuit, Send, Home } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { resumeData } from '@/config/resume-data';
 
 const navItems = [
@@ -59,8 +60,11 @@ export default function Navbar() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-full max-w-xs bg-background p-6">
+              <SheetHeader>
+                <SheetTitle className="sr-only">Mobile Menu</SheetTitle>
+              </SheetHeader>
               <div className="mb-6 flex items-center justify-between">
-                 <Link href="#hero" className="flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
+                 <Link href="#hero" className="flex items-center gap-2" onClick={() => setMobileMenuOpen(false)} aria-label="Homepage">
                     <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground font-semibold">
                       {initials}
                     </div>
