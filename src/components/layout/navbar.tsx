@@ -63,15 +63,13 @@ export default function Navbar() {
               <SheetHeader>
                 <SheetTitle className="sr-only">Mobile Menu</SheetTitle>
               </SheetHeader>
-              <div className="mb-6 flex items-center justify-between">
+              <div className="mb-6 flex items-center justify-start"> {/* Changed justify-between to justify-start */}
                  <Link href="#hero" className="flex items-center gap-2" onClick={() => setMobileMenuOpen(false)} aria-label="Homepage">
                     <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground font-semibold">
                       {initials}
                     </div>
                   </Link>
-                <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(false)} aria-label="Close menu">
-                  <X className="h-6 w-6" />
-                </Button>
+                {/* Removed the explicit X button from here, SheetContent provides one by default */}
               </div>
               <nav className="flex flex-col space-y-2">
                 <NavLinks onItemClick={() => setMobileMenuOpen(false)} />
