@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { openSans } from '@/lib/fonts';
+import { lato, playfairDisplay } from '@/lib/fonts';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import Navbar from '@/components/layout/navbar';
@@ -16,8 +16,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${openSans.variable} font-sans bg-background text-foreground`}>
+    <html lang="en" className={`${lato.variable} ${playfairDisplay.variable} scroll-smooth`}>
+      <body className={`font-sans bg-background text-foreground`}>
         <Navbar />
         <main vaul-drawer-wrapper="" className="min-h-screen flex-1 bg-background">{children}</main>
         <Footer />

@@ -4,33 +4,33 @@
 
 @layer base {
   :root {
-    --background: 240 50% 98%; /* Very light, almost white, cool gray */
-    --foreground: 240 10% 10%; /* Very dark, almost black, cool gray */
+    --background: 0 0% 100%; /* White */
+    --foreground: 240 10% 3.9%; /* Dark Gray */
 
-    --card: 0 0% 100%; /* White cards */
-    --card-foreground: 240 10% 10%; /* Dark text on cards */
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 10%;
+    --popover-foreground: 240 10% 3.9%;
 
-    --primary: 220 15% 45%; /* Muted Slate Blue for interactive elements */
-    --primary-foreground: 0 0% 100%; /* White text on Primary */
+    --primary: 240 5.9% 10%; /* Very Dark Blue/Gray - for main interactive elements */
+    --primary-foreground: 0 0% 98%; /* Light Gray - for text on primary */
 
-    --secondary: 220 15% 90%; /* Light muted slate blue/gray for secondary elements */
-    --secondary-foreground: 220 15% 25%; /* Darker text on secondary */
+    --secondary: 240 4.8% 95.9%; /* Light Gray - for secondary elements */
+    --secondary-foreground: 240 5.9% 10%; /* Dark Gray - for text on secondary */
 
-    --muted: 220 15% 90%; /* Muted gray - same as secondary */
-    --muted-foreground: 220 10% 45%; /* Readable muted text */
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%; /* Mid Gray - for muted text */
 
-    --accent: 220 15% 45%; /* Muted Slate Blue - consistent with primary */
-    --accent-foreground: 0 0% 100%; /* White text on Accent */
+    --accent: 240 4.8% 95.9%; /* Light Gray - for accents */
+    --accent-foreground: 240 5.9% 10%; /* Dark Gray - for text on accent */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 220 20% 85%; /* Adjusted border color - light gray */
-    --input: 220 20% 92%; /* Adjusted input background - off-white */
-    --ring: 220 15% 55%; /* Muted Slate Blue for rings */
+    --border: 240 5.9% 90%; /* Light Gray border */
+    --input: 240 5.9% 90%; /* Light Gray input background */
+    --ring: 240 5.9% 10%; /* Dark Gray ring */
 
     --radius: 0.5rem;
 
@@ -46,25 +46,25 @@
   }
 
   .dark {
-    --background: 240 10% 10%;
-    --foreground: 240 20% 95%;
-    --card: 240 10% 15%;
-    --card-foreground: 240 20% 95%;
-    --popover: 240 10% 15%;
-    --popover-foreground: 240 20% 95%;
-    --primary: 220 25% 65%; /* Lighter Muted Slate Blue for dark mode */
-    --primary-foreground: 240 10% 5%;
-    --secondary: 240 10% 20%;
-    --secondary-foreground: 240 20% 90%;
-    --muted: 240 10% 20%;
-    --muted-foreground: 240 15% 60%;
-    --accent: 220 25% 65%;
-    --accent-foreground: 240 10% 5%;
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 10% 25%;
-    --input: 240 10% 25%;
-    --ring: 220 25% 70%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 0 0% 98%;
 
     --sidebar-background: var(--background);
     --sidebar-foreground: var(--foreground);
@@ -82,20 +82,21 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans; /* font-sans will be Lato */
     @apply antialiased;
   }
   section {
     @apply w-full py-12 md:py-20 lg:py-24;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold tracking-tight;
+    @apply font-heading tracking-tight font-semibold; /* font-heading will be Playfair Display, keeping font-semibold */
   }
   h1 { @apply text-4xl sm:text-5xl md:text-6xl; }
   h2 { @apply text-3xl md:text-4xl; }
   h3 { @apply text-2xl md:text-3xl; }
 
   .section-title {
+    /* section-title is usually an h2, will inherit font-heading */
     @apply text-3xl font-bold tracking-tight text-primary sm:text-4xl md:text-5xl;
   }
 }

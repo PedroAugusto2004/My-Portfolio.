@@ -3,7 +3,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { Menu, X, Briefcase, User, BrainCircuit, Send, Home } from 'lucide-react';
+import { Menu, Briefcase, User, BrainCircuit, Send, Home } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { resumeData } from '@/config/resume-data';
@@ -36,16 +36,11 @@ export default function Navbar() {
     </>
   );
   
-  const initials = resumeData.name.split(" ").map(n => n[0]).join("");
-
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 max-w-screen-xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="#hero" className="flex items-center gap-2" aria-label="Homepage">
-          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground font-semibold">
-            {initials}
-          </div>
-          <span className="text-xl font-bold text-primary">{resumeData.name}</span>
+          <span className="text-2xl font-bold text-primary tracking-tight">{resumeData.name}</span>
         </Link>
 
         <nav className="hidden md:flex items-center space-x-1">
@@ -60,17 +55,12 @@ export default function Navbar() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-full max-w-xs bg-background p-6">
-              <SheetHeader>
-                <SheetTitle className="sr-only">Mobile Menu</SheetTitle>
-              </SheetHeader>
-              <div className="mb-6 flex items-center justify-start"> {/* Changed justify-between to justify-start */}
+              <SheetHeader className="mb-6 text-left">
+                 <SheetTitle className="sr-only">Mobile Menu</SheetTitle>
                  <Link href="#hero" className="flex items-center gap-2" onClick={() => setMobileMenuOpen(false)} aria-label="Homepage">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground font-semibold">
-                      {initials}
-                    </div>
+                    <span className="text-xl font-bold text-primary">{resumeData.name}</span>
                   </Link>
-                {/* Removed the explicit X button from here, SheetContent provides one by default */}
-              </div>
+              </SheetHeader>
               <nav className="flex flex-col space-y-2">
                 <NavLinks onItemClick={() => setMobileMenuOpen(false)} />
               </nav>
