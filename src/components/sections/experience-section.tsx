@@ -2,7 +2,7 @@ import { resumeData, type ExperienceEntry } from '@/config/resume-data';
 import SectionTitle from '@/components/ui/section-title-component';
 import AnimatedScrollWrapper from '@/components/ui/animated-scroll-wrapper';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Briefcase, CalendarDays, CheckCircle, Zap } from 'lucide-react';
+import { Briefcase, CalendarDays, CheckCircle } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
 
@@ -27,7 +27,7 @@ export default function ExperienceSection() {
         <div className="space-y-12">
           {resumeData.experience.map((exp: ExperienceEntry, index: number) => (
             <AnimatedScrollWrapper key={index} delay={`delay-${index * 100}`}>
-              <Card className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <Card className="overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
                 <div className="grid md:grid-cols-2">
                   <div className="relative h-64 md:h-auto w-full overflow-hidden">
                      <Image 
@@ -42,7 +42,7 @@ export default function ExperienceSection() {
                     <CardHeader className="p-0 mb-4">
                       <div className="flex items-center gap-3 mb-1">
                         <Briefcase className="h-7 w-7 text-primary" />
-                        <CardTitle className="text-2xl text-deepIndigo">{exp.role}</CardTitle>
+                        <CardTitle className="text-2xl text-primary">{exp.role}</CardTitle>
                       </div>
                       <CardDescription className="text-lg text-muted-foreground font-medium">
                         {exp.company}
@@ -54,7 +54,7 @@ export default function ExperienceSection() {
                     </CardHeader>
                     <CardContent className="p-0">
                       <p className="mb-4 text-foreground/80">{exp.description}</p>
-                      <h4 className="font-semibold text-md text-deepIndigo mb-2">Key Responsibilities:</h4>
+                      <h4 className="font-semibold text-md text-primary mb-2">Key Responsibilities:</h4>
                       <ul className="space-y-2 mb-4">
                         {exp.responsibilities.map((resp, i) => (
                           <li key={i} className="flex items-start gap-2 text-sm text-foreground/70">
@@ -65,7 +65,7 @@ export default function ExperienceSection() {
                       </ul>
                       {exp.technologies && exp.technologies.length > 0 && (
                         <div>
-                          <h4 className="font-semibold text-md text-deepIndigo mb-2">Technologies Used:</h4>
+                          <h4 className="font-semibold text-md text-primary mb-2">Technologies Used:</h4>
                           <div className="flex flex-wrap gap-2">
                             {exp.technologies.map((tech) => (
                               <Badge key={tech} variant="secondary" className="bg-primary/10 text-primary border-primary/30">

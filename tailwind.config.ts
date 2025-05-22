@@ -20,7 +20,7 @@ export default {
   				DEFAULT: 'hsl(var(--popover))',
   				foreground: 'hsl(var(--popover-foreground))'
   			},
-  			primary: { // Teal for interactive elements
+  			primary: {
   				DEFAULT: 'hsl(var(--primary))',
   				foreground: 'hsl(var(--primary-foreground))'
   			},
@@ -32,7 +32,7 @@ export default {
   				DEFAULT: 'hsl(var(--muted))',
   				foreground: 'hsl(var(--muted-foreground))'
   			},
-  			accent: { // Teal, consistent with primary for shadcn
+  			accent: {
   				DEFAULT: 'hsl(var(--accent))',
   				foreground: 'hsl(var(--accent-foreground))'
   			},
@@ -60,7 +60,7 @@ export default {
   				border: 'hsl(var(--sidebar-border))',
   				ring: 'hsl(var(--sidebar-ring))'
   			},
-        deepIndigo: '#4B0082', // Custom color for headings
+        // deepIndigo: '#4B0082', // Custom color removed for minimalism
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

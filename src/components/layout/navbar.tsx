@@ -12,7 +12,6 @@ const navItems = [
   { label: 'About', href: '#about', icon: User },
   { label: 'Skills', href: '#skills', icon: BrainCircuit },
   { label: 'Experience', href: '#experience', icon: Briefcase },
-  { label: 'AI Optimizer', href: '#ai-optimizer', icon: BrainCircuit },
   { label: 'Contact', href: '#contact', icon: Send },
 ];
 
@@ -45,7 +44,7 @@ export default function Navbar() {
           <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground font-semibold">
             {initials}
           </div>
-          <span className="text-xl font-bold text-deepIndigo">{resumeData.name}</span>
+          <span className="text-xl font-bold text-primary">{resumeData.name}</span>
         </Link>
 
         <nav className="hidden md:flex items-center space-x-1">

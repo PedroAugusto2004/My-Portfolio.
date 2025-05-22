@@ -9,7 +9,7 @@ export default function HeroSection() {
     <section id="hero" className="relative min-h-[calc(100vh-4rem)] flex items-center justify-center bg-gradient-to-br from-background via-slate-50 to-background py-12 md:py-20 lg:py-24">
       <div className="container mx-auto max-w-screen-lg px-4 text-center">
         <AnimatedScrollWrapper>
-          <h1 className="text-5xl font-extrabold tracking-tight text-deepIndigo sm:text-6xl md:text-7xl lg:text-8xl">
+          <h1 className="text-5xl font-extrabold tracking-tight text-primary sm:text-6xl md:text-7xl lg:text-8xl">
             {resumeData.name}
           </h1>
         </AnimatedScrollWrapper>

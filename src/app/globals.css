@@ -4,77 +4,76 @@
 
 @layer base {
   :root {
-    --background: 0 0% 94.1%; /* Light Gray #F0F0F0 */
-    --foreground: 0 0% 15%; /* Darker Gray for text, increased contrast */
+    --background: 240 50% 98%; /* Very light, almost white, cool gray */
+    --foreground: 240 10% 10%; /* Very dark, almost black, cool gray */
 
     --card: 0 0% 100%; /* White cards */
-    --card-foreground: 0 0% 15%; /* Dark text on cards */
+    --card-foreground: 240 10% 10%; /* Dark text on cards */
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 15%;
+    --popover-foreground: 240 10% 10%;
 
-    --primary: 180 100% 25.1%; /* Teal #008080 for interactive elements */
-    --primary-foreground: 0 0% 98%; /* White text on Teal */
+    --primary: 220 15% 45%; /* Muted Slate Blue for interactive elements */
+    --primary-foreground: 0 0% 100%; /* White text on Primary */
 
-    --secondary: 0 0% 96.1%; /* Lighter gray for secondary elements */
-    --secondary-foreground: 0 0% 9%;
+    --secondary: 220 15% 90%; /* Light muted slate blue/gray for secondary elements */
+    --secondary-foreground: 220 15% 25%; /* Darker text on secondary */
 
-    --muted: 0 0% 90%; /* Muted gray */
-    --muted-foreground: 0 0% 40%; /* Adjusted for better readability */
+    --muted: 220 15% 90%; /* Muted gray - same as secondary */
+    --muted-foreground: 220 10% 45%; /* Readable muted text */
 
-    --accent: 180 100% 25.1%; /* Teal #008080 - consistent with primary */
-    --accent-foreground: 0 0% 98%; /* White text on Teal */
+    --accent: 220 15% 45%; /* Muted Slate Blue - consistent with primary */
+    --accent-foreground: 0 0% 100%; /* White text on Accent */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 88%; /* Adjusted border color */
-    --input: 0 0% 88%; /* Adjusted input background */
-    --ring: 180 100% 25.1%; /* Teal for rings */
+    --border: 220 20% 85%; /* Adjusted border color - light gray */
+    --input: 220 20% 92%; /* Adjusted input background - off-white */
+    --ring: 220 15% 55%; /* Muted Slate Blue for rings */
 
     --radius: 0.5rem;
 
-    /* Sidebar specific colors (can be adjusted if sidebar is used extensively) */
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 180 100% 25.1%; 
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 180 100% 25.1%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 180 100% 25.1%;
+    /* Sidebar specific colors - aligned with main theme for minimalism */
+    --sidebar-background: var(--background);
+    --sidebar-foreground: var(--foreground);
+    --sidebar-primary: var(--primary);
+    --sidebar-primary-foreground: var(--primary-foreground);
+    --sidebar-accent: var(--accent);
+    --sidebar-accent-foreground: var(--accent-foreground);
+    --sidebar-border: var(--border);
+    --sidebar-ring: var(--ring);
   }
 
   .dark {
-    /* Dark theme - Basic setup, can be refined if dark mode is a priority */
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 180 90% 60%; /* Brighter Teal for dark mode */
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 180 90% 60%;
-    --accent-foreground: 0 0% 9%;
+    --background: 240 10% 10%;
+    --foreground: 240 20% 95%;
+    --card: 240 10% 15%;
+    --card-foreground: 240 20% 95%;
+    --popover: 240 10% 15%;
+    --popover-foreground: 240 20% 95%;
+    --primary: 220 25% 65%; /* Lighter Muted Slate Blue for dark mode */
+    --primary-foreground: 240 10% 5%;
+    --secondary: 240 10% 20%;
+    --secondary-foreground: 240 20% 90%;
+    --muted: 240 10% 20%;
+    --muted-foreground: 240 15% 60%;
+    --accent: 220 25% 65%;
+    --accent-foreground: 240 10% 5%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 180 90% 60%;
+    --border: 240 10% 25%;
+    --input: 240 10% 25%;
+    --ring: 220 25% 70%;
 
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 180 90% 60%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 180 90% 60%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 180 90% 60%;
+    --sidebar-background: var(--background);
+    --sidebar-foreground: var(--foreground);
+    --sidebar-primary: var(--primary);
+    --sidebar-primary-foreground: var(--primary-foreground);
+    --sidebar-accent: var(--accent);
+    --sidebar-accent-foreground: var(--accent-foreground);
+    --sidebar-border: var(--border);
+    --sidebar-ring: var(--ring);
   }
 }
 
@@ -97,6 +96,6 @@
   h3 { @apply text-2xl md:text-3xl; }
 
   .section-title {
-    @apply text-3xl font-bold tracking-tight text-deepIndigo sm:text-4xl md:text-5xl;
+    @apply text-3xl font-bold tracking-tight text-primary sm:text-4xl md:text-5xl;
   }
 }

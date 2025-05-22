@@ -80,9 +80,9 @@ export default function ContactSection() {
 
         <div className="grid md:grid-cols-2 gap-10 items-start">
           <AnimatedScrollWrapper delay="delay-100">
-            <Card className="shadow-lg">
+            <Card className="shadow-md">
               <CardHeader>
-                <CardTitle className="text-2xl text-deepIndigo flex items-center gap-2">
+                <CardTitle className="text-2xl text-primary flex items-center gap-2">
                   <Send className="h-6 w-6" /> Send Me a Message
                 </CardTitle>
                 <CardDescription>I'll do my best to respond as soon as possible.</CardDescription>
@@ -119,7 +119,7 @@ export default function ContactSection() {
           </AnimatedScrollWrapper>
 
           <AnimatedScrollWrapper delay="delay-200" className="space-y-6">
-            <h3 className="text-2xl font-semibold text-deepIndigo">Contact Information</h3>
+            <h3 className="text-2xl font-semibold text-primary">Contact Information</h3>
             <p className="text-muted-foreground">
               Alternatively, you can reach me through the following channels:
             </p>
@@ -138,7 +138,7 @@ export default function ContactSection() {
               </Link>
             </div>
              <div className="mt-6 p-4 border rounded-lg bg-card">
-              <h4 className="font-semibold text-deepIndigo mb-2">Preferred Contact Method:</h4>
+              <h4 className="font-semibold text-primary mb-2">Preferred Contact Method:</h4>
               <p className="text-sm text-muted-foreground">
                 Email is generally the quickest way to get a response for inquiries. For professional networking, LinkedIn is also a great option.
               </p>

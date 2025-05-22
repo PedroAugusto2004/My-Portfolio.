@@ -26,11 +26,11 @@ export default function SkillsSection() {
             const IconComponent = categoryIcons[category.category] || categoryIcons["Default"];
             return (
               <AnimatedScrollWrapper key={category.category} delay={`delay-${index * 100}`}>
-                <Card className="h-full shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <Card className="h-full shadow-md hover:shadow-lg transition-shadow duration-300">
                   <CardHeader>
                     <div className="flex items-center gap-3 mb-2">
                       <IconComponent className="h-8 w-8 text-primary" />
-                      <CardTitle className="text-2xl text-deepIndigo">{category.category}</CardTitle>
+                      <CardTitle className="text-2xl text-primary">{category.category}</CardTitle>
                     </div>
                   </CardHeader>
                   <CardContent>
