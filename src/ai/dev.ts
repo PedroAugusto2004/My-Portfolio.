@@ -1,5 +1,5 @@
 import { config } from 'dotenv';
 config();
 
-// Removed import for resume-optimization.ts as the feature is no longer in use.
-// import '@/ai/flows/resume-optimization.ts';
+// This file is intentionally left minimal after removing Genkit-specific code.
+// You can use it for other development-specific initializations if needed.
