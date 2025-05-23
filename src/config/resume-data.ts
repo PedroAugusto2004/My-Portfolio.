@@ -38,9 +38,9 @@ export const resumeData = {
   name: "Pedro Augusto",
   title: "Full Stack Developer | AWS & Firebase Cloud Specialist",
   contact: {
-    email: "PEDRO.AUGUSTO07.DEV@GMAIL.COM",
-    linkedin: "https://www.linkedin.com/in/pedro-augusto-dev/", // Replace with actual LinkedIn
-    github: "https://github.com/pedro-augusto-dev", // Replace with actual GitHub
+    email: "pedro.augsuto07.dev@gmail.com",
+    linkedin: "https://www.linkedin.com/in/pedro-augusto-cabral-oliveira/",
+    github: "https://github.com/pedro-augusto-dev", 
     portfolioUrl: "", // This website, will be populated dynamically if needed
   },
   summary: "Full-Stack Developer with hands-on expertise in AWS and Firebase cloud platforms. Proficient in JavaScript, Python, and C, with a strong focus on building scalable, secure, and serverless web applications. Experienced in building modern UIs, optimizing performance, and architecting robust, cloud-native solutions.",

@@ -49,7 +49,7 @@ export default function AboutSection() {
                 <AccordionItem value="certifications">
                   <AccordionTrigger className="px-4 text-lg font-semibold hover:no-underline data-[state=open]:text-primary">
                      <div className="flex items-center gap-3">
-                      <Award className="h-6 w-6 text-primary" /> Certifications
+                      <CircleCheckBig className="h-6 w-6 text-primary" /> Certifications
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="px-4 pt-2">
@@ -80,7 +80,7 @@ export default function AboutSection() {
                                 </DialogTrigger>
                                 <DialogContent className="max-w-3xl p-1 sm:p-2 md:p-3 bg-background overflow-auto">
                                   <DialogHeader className="sr-only">
-                                    <DialogTitle>{cert.name}</DialogTitle>
+                                    <DialogTitle>{cert.name} Certificate</DialogTitle>
                                     <DialogDescription>
                                       Expanded view of {resumeData.name}'s {cert.name} Certificate of Completion from {cert.issuer}.
                                     </DialogDescription>
