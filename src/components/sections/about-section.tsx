@@ -1,6 +1,9 @@
+
 import { resumeData } from '@/config/resume-data';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { GraduationCap, Award, Zap, Building, CalendarDays, CheckCircle } from 'lucide-react';
+import { Dialog, DialogContent, DialogTrigger, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
+import Image from 'next/image';
+import { GraduationCap, Award, Zap, CheckCircle } from 'lucide-react';
 import SectionTitle from '@/components/ui/section-title-component';
 import AnimatedScrollWrapper from '@/components/ui/animated-scroll-wrapper';
 
@@ -50,13 +53,49 @@ export default function AboutSection() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="px-4 pt-2">
-                    <ul className="space-y-2 text-muted-foreground">
+                    <ul className="space-y-4 text-muted-foreground"> {/* Increased space-y for image */}
                       {resumeData.certifications.map((cert, index) => (
-                        <li key={index} className="flex items-start gap-2 pl-2">
-                           <CheckCircle className="h-5 w-5 mt-0.5 text-primary flex-shrink-0" />
-                           <span>
-                            <span className="font-medium text-foreground">{cert.name}</span> - {cert.issuer}
-                          </span>
+                        <li key={index} className="pl-2">
+                          <div className="flex items-start gap-2">
+                            <CheckCircle className="h-5 w-5 mt-0.5 text-primary flex-shrink-0" />
+                            <span>
+                              <span className="font-medium text-foreground">{cert.name}</span> - {cert.issuer}
+                              {cert.year && <span className="text-sm"> ({cert.year})</span>}
+                            </span>
+                          </div>
+                          {cert.name === "CS50x: Introduction to Computer Science" && (
+                            <div className="mt-2 pl-7"> {/* Indent under the text, adjust pl if needed */}
+                              <Dialog>
+                                <DialogTrigger asChild>
+                                  <button aria-label={`View ${cert.name} Certificate`} className="outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded">
+                                    <Image
+                                      src="/images/cs50x-certificate.png" // Ensure this path is correct
+                                      alt={`${cert.name} Thumbnail`}
+                                      width={150}
+                                      height={106} // Approximate aspect ratio (150 / 1.41)
+                                      className="rounded shadow-md cursor-pointer hover:opacity-80 transition-opacity"
+                                      data-ai-hint="certificate document"
+                                    />
+                                  </button>
+                                </DialogTrigger>
+                                <DialogContent className="max-w-3xl p-1 sm:p-2 md:p-3 bg-background overflow-auto">
+                                  <DialogHeader className="sr-only">
+                                    <DialogTitle>{cert.name}</DialogTitle>
+                                    <DialogDescription>
+                                      Expanded view of {resumeData.name}'s {cert.name} Certificate of Completion from {cert.issuer}.
+                                    </DialogDescription>
+                                  </DialogHeader>
+                                  <Image
+                                    src="/images/cs50x-certificate.png" // Ensure this path is correct
+                                    alt={`${cert.name} - ${resumeData.name}`}
+                                    width={1200} 
+                                    height={849} // Original aspect ratio for clarity
+                                    className="rounded-md w-full h-auto"
+                                  />
+                                </DialogContent>
+                              </Dialog>
+                            </div>
+                          )}
                         </li>
                       ))}
                     </ul>
@@ -92,3 +131,4 @@ export default function AboutSection() {
     </section>
   );
 }
+
