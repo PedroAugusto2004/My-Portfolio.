@@ -3,7 +3,7 @@ import { resumeData } from '@/config/resume-data';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Dialog, DialogContent, DialogTrigger, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import Image from 'next/image';
-import { GraduationCap, Award, Zap, CircleCheckBig } from 'lucide-react'; // Changed to CircleCheckBig for consistency
+import { GraduationCap, Award, Zap, CircleCheckBig } from 'lucide-react';
 import SectionTitle from '@/components/ui/section-title-component';
 import AnimatedScrollWrapper from '@/components/ui/animated-scroll-wrapper';
 
