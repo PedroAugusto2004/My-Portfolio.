@@ -18,11 +18,6 @@ export default function HeroSection() {
             {resumeData.title}
           </p>
         </AnimatedScrollWrapper>
-        <AnimatedScrollWrapper delay="delay-200">
-          <p className="mt-6 max-w-2xl mx-auto text-base text-muted-foreground sm:text-lg md:text-xl">
-            {resumeData.summary.substring(0, 150)}... {/* Shortened summary for hero */}
-          </p>
-        </AnimatedScrollWrapper>
         
         <AnimatedScrollWrapper delay="delay-300" className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button asChild size="lg" className="w-full sm:w-auto shadow-lg hover:shadow-xl transition-shadow">
