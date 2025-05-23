@@ -15,6 +15,7 @@ import { useToast } from '@/hooks/use-toast';
 import { resumeData } from '@/config/resume-data';
 import { Mail, Linkedin, Github, Send, Loader2 } from 'lucide-react';
 import Link from 'next/link';
+import { sendContactEmail } from '@/lib/send-contact-email';
 
 const contactFormSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -24,17 +25,9 @@ const contactFormSchema = z.object({
 
 type ContactFormData = z.infer<typeof contactFormSchema>;
 
-// Mock server action
+// Replace the mock server action with the real email sending function
 async function submitContactForm(data: ContactFormData): Promise<{ success: boolean; message: string }> {
-  console.log("Form data submitted:", data);
-  // Simulate API call
-  await new Promise(resolve => setTimeout(resolve, 1500));
-  // Simulate a successful submission for now
-  // In a real app, you'd integrate with an email service or backend
-  if (data.email.includes("error")) { // Simulate error
-      return { success: false, message: "Failed to send message. Please try again." };
-  }
-  return { success: true, message: "Your message has been sent successfully! I'll get back to you soon." };
+  return await sendContactEmail(data);
 }
 
 
