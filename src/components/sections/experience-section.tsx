@@ -3,9 +3,8 @@ import { resumeData, type ExperienceEntry } from '@/config/resume-data';
 import SectionTitle from '@/components/ui/section-title-component';
 import AnimatedScrollWrapper from '@/components/ui/animated-scroll-wrapper';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Briefcase, CalendarDays, CheckCircle } from 'lucide-react'; // Corrected: Used CircleCheckBig previously, should be CheckCircle based on usage
+import { Briefcase, CalendarDays, CheckCircle } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
-import Image from 'next/image';
 
 export default function ExperienceSection() {
   return (
@@ -18,19 +17,8 @@ export default function ExperienceSection() {
         <div className="space-y-12">
           {resumeData.experience.map((exp: ExperienceEntry, index: number) => (
             <AnimatedScrollWrapper key={index} delay={`delay-${index * 100}`}>
-              <Card className="overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 bg-card">
-                <div className="relative w-full aspect-video bg-muted/20"> {/* Image container with 16:9 aspect ratio and light background */}
-                  <Image
-                    src="/images/exp.png" 
-                    alt={`${exp.company} project image`}
-                    layout="fill"
-                    objectFit="contain" // Ensures the entire image is visible
-                    className="p-1" // Small padding around the contained image
-                    data-ai-hint="project visual"
-                  />
-                </div>
-                
-                <div className="p-6 md:p-8"> {/* Wrapper for text content to ensure consistent padding */}
+              <Card className="shadow-md hover:shadow-lg transition-shadow duration-300 bg-card">
+                <div className="p-6 md:p-8"> {/* Wrapper for all text content */}
                   <CardHeader className="p-0 mb-4">
                     <div className="flex items-center gap-3 mb-1">
                       <Briefcase className="h-7 w-7 text-primary" />
@@ -45,22 +33,24 @@ export default function ExperienceSection() {
                     </div>
                   </CardHeader>
                   <CardContent className="p-0">
-                    <p className="mb-4 text-foreground/80">{exp.description}</p>
-                    <h4 className="font-semibold text-md text-primary mb-2">Key Responsibilities:</h4>
-                    <ul className="space-y-2 mb-4">
+                    <p className="mb-6 text-foreground/80">{exp.description}</p>
+                    
+                    <h4 className="font-semibold text-md text-primary mb-3">Key Responsibilities:</h4>
+                    <ul className="space-y-2.5 mb-6">
                       {exp.responsibilities.map((resp, i) => (
-                        <li key={i} className="flex items-start gap-2 text-sm text-foreground/70">
-                          <CheckCircle className="h-5 w-5 mt-0.5 text-primary flex-shrink-0" />
+                        <li key={i} className="flex items-start gap-2.5 text-sm text-foreground/75">
+                          <CheckCircle className="h-5 w-5 mt-px text-primary flex-shrink-0" />
                           {resp}
                         </li>
                       ))}
                     </ul>
+
                     {exp.technologies && exp.technologies.length > 0 && (
                       <div>
-                        <h4 className="font-semibold text-md text-primary mb-2">Technologies Used:</h4>
+                        <h4 className="font-semibold text-md text-primary mb-3">Technologies Used:</h4>
                         <div className="flex flex-wrap gap-2">
                           {exp.technologies.map((tech) => (
-                            <Badge key={tech} variant="secondary" className="bg-primary/10 text-primary border-primary/30">
+                            <Badge key={tech} variant="secondary" className="bg-primary/10 text-primary border-primary/30 px-3 py-1">
                               {tech}
                             </Badge>
                           ))}
