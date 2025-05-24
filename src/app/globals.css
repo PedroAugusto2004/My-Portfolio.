@@ -44,23 +44,23 @@
     --sidebar-border: var(--border);
     --sidebar-ring: var(--ring);
 
-    /* Futuristic Background Variables */
+    /* Futuristic Background Variables for Light Mode */
     --futuristic-bg-angle-scroll: 145deg;
     --futuristic-color-1-h: 220; /* Muted Blueish */
-    --futuristic-color-1-s: 25%;
-    --futuristic-color-1-l-light: 95%;
+    --futuristic-color-1-s: 30%;
+    --futuristic-color-1-l-light: 96%;
     --futuristic-color-1-l-dark: 8%;
     --futuristic-color-1-a: 0.5;
 
     --futuristic-color-2-h: 240; /* Muted Indigo/Purple */
-    --futuristic-color-2-s: 20%;
+    --futuristic-color-2-s: 25%;
     --futuristic-color-2-l-light: 98%;
     --futuristic-color-2-l-dark: 5%;
     --futuristic-color-2-a: 0.4;
 
     --futuristic-color-3-h: 200; /* Muted Cyan/Steel Blue */
-    --futuristic-color-3-s: 20%;
-    --futuristic-color-3-l-light: 96%;
+    --futuristic-color-3-s: 25%;
+    --futuristic-color-3-l-light: 97%;
     --futuristic-color-3-l-dark: 7%;
     --futuristic-color-3-a: 0.3;
 
@@ -70,32 +70,32 @@
   }
 
   .dark {
-    --background: 240 10% 3.9%; /* Darkest Gray */
-    --foreground: 0 0% 98%; /* Light Gray */
+    --background: 220 15% 15%; /* Very Dark Bluish Gray */
+    --foreground: 220 30% 85%; /* Light Bluish Gray */
 
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
+    --card: 220 15% 18%; /* Slightly lighter than background for depth */
+    --card-foreground: 220 30% 88%;
 
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 220 15% 12%; /* Darker for popovers */
+    --popover-foreground: 220 30% 90%;
 
     --primary: 220 55% 70%; /* Slightly Brighter Neutral Blue for Dark */
     --primary-foreground: 0 0% 100%; /* White */
 
-    --secondary: 240 3.7% 15.9%; /* Dark Gray */
-    --secondary-foreground: 0 0% 98%; /* Light Gray */
+    --secondary: 220 15% 25%; /* Dark Gray for secondary elements */
+    --secondary-foreground: 220 30% 80%; 
 
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%; /* Mid Gray */
+    --muted: 220 15% 25%;
+    --muted-foreground: 220 20% 60%; /* Mid Gray for muted text */
 
-    --accent: 220 30% 25%; /* Dark Neutral Blue/Gray */
+    --accent: 220 25% 30%; /* Darker Muted Neutral Blue */
     --accent-foreground: 220 50% 85%; /* Light Muted Neutral Blue */
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 70% 50%; /* Adjusted for dark mode */
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 3.7% 15.9%; /* Dark Gray border */
-    --input: 240 3.7% 15.9%; /* Dark Gray input background */
+    --border: 220 15% 30%; /* Dark Gray border */
+    --input: 220 15% 28%; /* Dark Gray input background */
     --ring: 220 55% 70%; /* Slightly Brighter Neutral Blue for Dark */
 
     /* Sidebar specific colors - will inherit from the main theme */
