@@ -7,11 +7,6 @@ import { Briefcase, CalendarDays, CheckCircle } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
 
-// Define projectPlaceholders array
-const projectPlaceholders = resumeData.experience.map(
-  (_, index) => `https://placehold.co/600x${400 + index * 10}.png` // Vary height slightly for visual difference
-);
-
 export default function ExperienceSection() {
   return (
     <section id="experience" className="bg-transparent">
@@ -27,11 +22,11 @@ export default function ExperienceSection() {
                 <div className="grid md:grid-cols-2">
                   <div className="relative h-64 md:h-auto w-full overflow-hidden">
                      <Image 
-                        src={projectPlaceholders[index]} 
+                        src="/images/experience.png" // Updated to use the specific local image
                         alt={`${exp.company} project image`} 
                         layout="fill" 
-                        objectFit="cover" // Changed to cover for better placeholder filling
-                        data-ai-hint="project visual"
+                        objectFit="cover"
+                        data-ai-hint="project showcase" // Updated AI hint
                       />
                   </div>
                   <div className="p-6 md:p-8">
