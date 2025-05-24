@@ -32,7 +32,7 @@ export default function RootLayout({
           <Navbar />
           <main vaul-drawer-wrapper="" className="min-h-screen flex-1 bg-transparent">{children}</main>
           <Footer />
-          <div className="fixed bottom-4 right-4 z-50">
+          <div className="fixed bottom-4 right-4 z-[101]"> {/* Increased z-index */}
             <ThemeToggle />
           </div>
           <Toaster />
