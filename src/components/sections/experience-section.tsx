@@ -3,8 +3,10 @@ import { resumeData, type ExperienceEntry } from '@/config/resume-data';
 import SectionTitle from '@/components/ui/section-title-component';
 import AnimatedScrollWrapper from '@/components/ui/animated-scroll-wrapper';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Briefcase, CalendarDays, CheckCircle } from 'lucide-react';
+import { Briefcase, CalendarDays, CheckCircle, Github } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 
 export default function ExperienceSection() {
   return (
@@ -46,13 +48,29 @@ export default function ExperienceSection() {
                     </ul>
 
                     {exp.technologies && exp.technologies.length > 0 && (
-                      <div>
+                      <div className="mb-6">
                         <h4 className="font-semibold text-md text-primary mb-3">Technologies Used:</h4>
                         <div className="flex flex-wrap gap-2">
                           {exp.technologies.map((tech) => (
                             <Badge key={tech} variant="secondary" className="px-3 py-1 text-sm bg-primary/10 text-primary border-primary/30 hover:bg-primary/20 transition-colors">
                               {tech}
                             </Badge>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {exp.projectLinks && exp.projectLinks.length > 0 && (
+                      <div>
+                        <h4 className="font-semibold text-md text-primary mb-3">Project Repositories:</h4>
+                        <div className="flex flex-wrap gap-3">
+                          {exp.projectLinks.map((link, linkIndex) => (
+                            <Button asChild variant="outline" size="sm" key={linkIndex} className="hover:bg-accent/80">
+                              <Link href={link.url} target="_blank" rel="noopener noreferrer" aria-label={`View ${link.name} on GitHub`}>
+                                <Github className="mr-2 h-4 w-4" />
+                                {link.name}
+                              </Link>
+                            </Button>
                           ))}
                         </div>
                       </div>

@@ -25,6 +25,11 @@ export interface EducationEntry {
   period: string;
 }
 
+export interface ProjectLink {
+  name: string;
+  url: string;
+}
+
 export interface ExperienceEntry {
   role: string;
   company: string;
@@ -32,6 +37,7 @@ export interface ExperienceEntry {
   description: string;
   responsibilities: string[];
   technologies?: string[];
+  projectLinks?: ProjectLink[];
 }
 
 export const resumeData = {
@@ -113,7 +119,11 @@ export const resumeData = {
         "Implemented secure authentication flows with AWS Cognito and Firebase Auth, handling login, authorization, and session management.",
         "Optimized app performance with AWS CloudFront, cutting load times by 40%, and reduced backend latency through efficient API design.",
       ],
-      technologies: ["AWS Lambda", "Firebase Cloud Functions", "AWS Cognito", "Firebase Auth", "AWS Amplify", "GitHub Actions", "JavaScript", "HTML/CSS", "Python", "AWS CloudFront", "Next.js", "React.js", "Tailwind CSS"]
+      technologies: ["AWS Lambda", "Firebase Cloud Functions", "AWS Cognito", "Firebase Auth", "AWS Amplify", "GitHub Actions", "JavaScript", "HTML/CSS", "Python", "AWS CloudFront", "Next.js", "React.js", "Tailwind CSS"],
+      projectLinks: [
+        { name: "MediMentor GitHub", url: "#" },
+        { name: "Muscles & Balance GitHub", url: "#" }
+      ]
     },
   ] as ExperienceEntry[],
   get 전체ResumeText() {
@@ -136,7 +146,7 @@ Skills:
 ${this.skills.map(cat => `  ${cat.category}:\n${cat.skills.map(skill => `    - ${skill.name}${skill.description ? ` (${skill.description})` : ''}`).join('\n')}`).join('\n\n')}
 
 Experience:
-${this.experience.map(exp => `  ${exp.role} at ${exp.company} (${exp.period})\n  Description: ${exp.description}\n  Responsibilities:\n${exp.responsibilities.map(res => `    - ${res}`).join('\n')}`).join('\n\n')}
+${this.experience.map(exp => `  ${exp.role} at ${exp.company} (${exp.period})\n  Description: ${exp.description}\n  Responsibilities:\n${exp.responsibilities.map(res => `    - ${res}`).join('\n')}\n  ${exp.projectLinks ? 'Project Links:\n' + exp.projectLinks.map(link => `    - ${link.name}: ${link.url}`).join('\n') : ''}`).join('\n\n')}
     `;
   },
   get portfolioSummaryText() {
