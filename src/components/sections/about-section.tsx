@@ -146,11 +146,46 @@ export default function AboutSection() {
                   <AccordionContent className="px-4 pt-2">
                     <ul className="space-y-2 text-muted-foreground">
                       {resumeData.achievements.map((ach, index) => (
-                        <li key={index} className="flex items-start gap-2 pl-2">
-                          <Zap className="h-5 w-5 mt-0.5 text-primary flex-shrink-0" />
-                          <span>
-                            <span className="font-medium text-foreground">{ach.title}</span>: {ach.description}
-                          </span>
+                        <li key={index} className="pl-2">
+                          <div className="flex items-start gap-2">
+                            <Zap className="h-5 w-5 mt-0.5 text-primary flex-shrink-0" />
+                            <span>
+                              <span className="font-medium text-foreground">{ach.title}</span>: {ach.description}
+                            </span>
+                          </div>
+                          {ach.title === "VOX ASTRA Hackathon Winner" && (
+                            <div className="mt-2 pl-7">
+                              <Dialog>
+                                <DialogTrigger asChild>
+                                  <button aria-label={`View ${ach.title} Related Image`} className="outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded">
+                                    <Image
+                                      src="/images/MediMentor.jpg" 
+                                      alt={`${ach.title} Thumbnail`}
+                                      width={150} // Adjust as needed for thumbnail size
+                                      height={106} // Adjust to maintain aspect ratio, or use a square
+                                      className="rounded shadow-md cursor-pointer hover:opacity-80 transition-opacity transform hover:scale-105"
+                                      data-ai-hint="hackathon project"
+                                    />
+                                  </button>
+                                </DialogTrigger>
+                                <DialogContent className="max-w-3xl p-1 sm:p-2 md:p-3 bg-background overflow-auto">
+                                  <DialogHeader className="sr-only">
+                                    <DialogTitle>{ach.title} - Visual</DialogTitle>
+                                    <DialogDescription>
+                                      Expanded view of an image related to {resumeData.name}'s {ach.title} achievement.
+                                    </DialogDescription>
+                                  </DialogHeader>
+                                  <Image
+                                    src="/images/MediMentor.jpg" 
+                                    alt={`${ach.title} - ${resumeData.name}`}
+                                    width={1200} // Adjust for desired expanded size
+                                    height={800} // Adjust for desired expanded size
+                                    className="rounded-md w-full h-auto"
+                                  />
+                                </DialogContent>
+                              </Dialog>
+                            </div>
+                          )}
                         </li>
                       ))}
                     </ul>
@@ -164,3 +199,4 @@ export default function AboutSection() {
     </section>
   );
 }
+
