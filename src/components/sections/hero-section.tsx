@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { resumeData } from '@/config/resume-data';
@@ -8,43 +9,43 @@ export default function HeroSection() {
   return (
     <section id="hero" className="relative min-h-[calc(100vh-4rem)] flex items-center justify-center py-12 md:py-20 lg:py-24 bg-transparent">
       <div className="container mx-auto max-w-screen-lg px-4 text-center">
-        <AnimatedScrollWrapper>
+        <AnimatedScrollWrapper animationClassName="animate-fade-in-up">
           <h1 className="text-5xl font-extrabold tracking-tight text-primary sm:text-6xl md:text-7xl lg:text-8xl">
             {resumeData.name}
           </h1>
         </AnimatedScrollWrapper>
-        <AnimatedScrollWrapper delay="delay-100">
+        <AnimatedScrollWrapper animationClassName="animate-fade-in-up" delay="delay-100">
           <p className="mt-4 text-xl font-medium text-foreground/80 sm:text-2xl md:text-3xl">
             {resumeData.title}
           </p>
         </AnimatedScrollWrapper>
         
-        <AnimatedScrollWrapper delay="delay-300" className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button asChild size="lg" className="w-full sm:w-auto shadow-lg hover:shadow-xl transition-shadow">
+        <AnimatedScrollWrapper animationClassName="animate-fade-in-up" delay="delay-300" className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <Button asChild size="lg" className="w-full sm:w-auto shadow-lg hover:shadow-xl transition-shadow hover:bg-primary/80">
             <Link href="#contact">
               <Mail className="mr-2 h-5 w-5" /> Get in Touch
             </Link>
           </Button>
-          <Button asChild variant="outline" size="lg" className="w-full sm:w-auto shadow-lg hover:shadow-xl transition-shadow">
+          <Button asChild variant="outline" size="lg" className="w-full sm:w-auto shadow-lg hover:shadow-xl transition-shadow hover:bg-accent/80">
             <Link href="#experience">
               <FileText className="mr-2 h-5 w-5" /> View My Work
             </Link>
           </Button>
         </AnimatedScrollWrapper>
 
-        <AnimatedScrollWrapper delay="delay-400" className="mt-12 flex justify-center space-x-6">
+        <AnimatedScrollWrapper animationClassName="animate-fade-in-up" delay="delay-400" className="mt-12 flex justify-center space-x-6">
           {resumeData.contact.github && (
-            <Link href={resumeData.contact.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" className="text-muted-foreground hover:text-primary transition-colors">
+            <Link href={resumeData.contact.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" className="text-muted-foreground hover:text-primary transition-colors hover:scale-110 transform">
               <Github className="h-7 w-7" />
             </Link>
           )}
           {resumeData.contact.linkedin && (
-            <Link href={resumeData.contact.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" className="text-muted-foreground hover:text-primary transition-colors">
+            <Link href={resumeData.contact.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" className="text-muted-foreground hover:text-primary transition-colors hover:scale-110 transform">
               <Linkedin className="h-7 w-7" />
             </Link>
           )}
           {resumeData.contact.email && (
-            <Link href={`mailto:${resumeData.contact.email}`} aria-label="Email" className="text-muted-foreground hover:text-primary transition-colors">
+            <Link href={`mailto:${resumeData.contact.email}`} aria-label="Email" className="text-muted-foreground hover:text-primary transition-colors hover:scale-110 transform">
               <Mail className="h-7 w-7" />
             </Link>
           )}

@@ -72,7 +72,7 @@ export default function ContactSection() {
   return (
     <section id="contact" className="bg-transparent">
       <div className="container mx-auto max-w-screen-lg px-4">
-        <AnimatedScrollWrapper>
+        <AnimatedScrollWrapper animationClassName="animate-fade-in-up">
           <SectionTitle>Get In Touch</SectionTitle>
           <p className="mb-10 text-center text-lg text-muted-foreground md:text-xl">
             Have a project in mind, a question, or just want to connect? Feel free to reach out!
@@ -80,8 +80,8 @@ export default function ContactSection() {
         </AnimatedScrollWrapper>
 
         <div className="grid md:grid-cols-2 gap-10 items-start">
-          <AnimatedScrollWrapper delay="delay-100">
-            <Card className="shadow-md bg-card"> {/* Added bg-card for content readability */}
+          <AnimatedScrollWrapper delay="delay-100" animationClassName="animate-fade-in-up">
+            <Card className="shadow-md bg-card hover:shadow-lg transition-shadow duration-300">
               <CardHeader>
                 <CardTitle className="text-2xl text-primary flex items-center gap-2">
                   <Send className="h-6 w-6" /> Send Me a Message
@@ -107,7 +107,7 @@ export default function ContactSection() {
                   </div>
                 </CardContent>
                 <CardFooter>
-                  <Button type="submit" className="w-full" disabled={isPending} size="lg">
+                  <Button type="submit" className="w-full hover:bg-primary/80" disabled={isPending} size="lg">
                     {isPending ? (
                       <><Loader2 className="mr-2 h-5 w-5 animate-spin" /> Sending...</>
                     ) : (
@@ -119,27 +119,27 @@ export default function ContactSection() {
             </Card>
           </AnimatedScrollWrapper>
 
-          <AnimatedScrollWrapper delay="delay-200" className="space-y-6">
-            <Card className="shadow-md p-6 bg-card"> {/* Added bg-card and padding */}
+          <AnimatedScrollWrapper delay="delay-200" className="space-y-6" animationClassName="animate-fade-in-up">
+            <Card className="shadow-md p-6 bg-card hover:shadow-lg transition-shadow duration-300">
               <h3 className="text-2xl font-semibold text-primary mb-4">Contact Information</h3>
               <p className="text-muted-foreground mb-4">
                 Alternatively, you can reach me through the following channels:
               </p>
               <div className="space-y-4">
-                <Link href={`mailto:${resumeData.contact.email}`} className="flex items-center gap-3 group">
+                <Link href={`mailto:${resumeData.contact.email}`} className="flex items-center gap-3 group hover:text-primary transition-colors">
                   <Mail className="h-6 w-6 text-primary" />
                   <span className="text-foreground group-hover:text-primary transition-colors">{resumeData.contact.email}</span>
                 </Link>
-                <Link href={resumeData.contact.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 group">
+                <Link href={resumeData.contact.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 group hover:text-primary transition-colors">
                   <Linkedin className="h-6 w-6 text-primary" />
                   <span className="text-foreground group-hover:text-primary transition-colors">LinkedIn Profile</span>
                 </Link>
-                <Link href={resumeData.contact.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 group">
+                <Link href={resumeData.contact.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 group hover:text-primary transition-colors">
                   <Github className="h-6 w-6 text-primary" />
                   <span className="text-foreground group-hover:text-primary transition-colors">GitHub Profile</span>
                 </Link>
               </div>
-              <div className="mt-6 p-4 border rounded-lg bg-background"> {/* Use bg-background for contrast inside card */}
+              <div className="mt-6 p-4 border rounded-lg bg-background">
                 <h4 className="font-semibold text-primary mb-2">Preferred Contact Method:</h4>
                 <p className="text-sm text-muted-foreground">
                   Email is generally the quickest way to get a response for inquiries. For professional networking, LinkedIn is also a great option.

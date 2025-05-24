@@ -10,15 +10,15 @@ export default function ExperienceSection() {
   return (
     <section id="experience" className="bg-transparent">
       <div className="container mx-auto max-w-screen-xl px-4">
-        <AnimatedScrollWrapper>
+        <AnimatedScrollWrapper animationClassName="animate-fade-in-up">
           <SectionTitle>Experience & Projects</SectionTitle>
         </AnimatedScrollWrapper>
 
         <div className="space-y-12">
           {resumeData.experience.map((exp: ExperienceEntry, index: number) => (
-            <AnimatedScrollWrapper key={index} delay={`delay-${index * 100}`}>
+            <AnimatedScrollWrapper key={index} delay={`delay-${index * 100}`} animationClassName="animate-fade-in-up">
               <Card className="shadow-md hover:shadow-lg transition-shadow duration-300 bg-card">
-                <div className="p-6 md:p-8"> {/* Wrapper for all text content */}
+                <div className="p-6 md:p-8">
                   <CardHeader className="p-0 mb-4">
                     <div className="flex items-center gap-3 mb-1">
                       <Briefcase className="h-7 w-7 text-primary" />
@@ -50,7 +50,7 @@ export default function ExperienceSection() {
                         <h4 className="font-semibold text-md text-primary mb-3">Technologies Used:</h4>
                         <div className="flex flex-wrap gap-2">
                           {exp.technologies.map((tech) => (
-                            <Badge key={tech} variant="secondary" className="bg-primary/10 text-primary border-primary/30 px-3 py-1">
+                            <Badge key={tech} variant="secondary" className="px-3 py-1 text-sm bg-primary/10 text-primary border-primary/30 hover:bg-primary/20 transition-colors">
                               {tech}
                             </Badge>
                           ))}

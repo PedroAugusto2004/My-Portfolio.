@@ -11,18 +11,18 @@ export default function AboutSection() {
   return (
     <section id="about" className="bg-transparent">
       <div className="container mx-auto max-w-screen-lg px-4">
-        <AnimatedScrollWrapper>
+        <AnimatedScrollWrapper animationClassName="animate-fade-in-up">
           <SectionTitle>About Me</SectionTitle>
         </AnimatedScrollWrapper>
         
-        <AnimatedScrollWrapper delay="delay-100">
+        <AnimatedScrollWrapper animationClassName="animate-fade-in-up" delay="delay-100">
           <p className="mb-12 text-center text-lg text-muted-foreground md:text-xl">
             {resumeData.summary}
           </p>
         </AnimatedScrollWrapper>
 
         <div className="grid md:grid-cols-1 gap-8">
-          <AnimatedScrollWrapper as="div" className="w-full" delay="delay-200">
+          <AnimatedScrollWrapper as="div" className="w-full" animationClassName="animate-fade-in-up" delay="delay-200">
              <Accordion type="single" collapsible className="w-full rounded-lg border bg-card p-2 shadow-sm">
               {resumeData.education.length > 0 && (
                 <AccordionItem value="education">
@@ -73,7 +73,7 @@ export default function AboutSection() {
                                       alt={`${cert.name} Thumbnail`}
                                       width={150}
                                       height={106} 
-                                      className="rounded shadow-md cursor-pointer hover:opacity-80 transition-opacity"
+                                      className="rounded shadow-md cursor-pointer hover:opacity-80 transition-opacity transform hover:scale-105"
                                       data-ai-hint="certificate document"
                                     />
                                   </button>
@@ -106,7 +106,7 @@ export default function AboutSection() {
                                       alt={`${cert.name} Thumbnail`}
                                       width={150}
                                       height={106}
-                                      className="rounded shadow-md cursor-pointer hover:opacity-80 transition-opacity"
+                                      className="rounded shadow-md cursor-pointer hover:opacity-80 transition-opacity transform hover:scale-105"
                                       data-ai-hint="certificate document"
                                     />
                                   </button>
