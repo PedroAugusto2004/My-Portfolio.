@@ -137,7 +137,7 @@ export default function AboutSection() {
               )}
 
               {resumeData.achievements.length > 0 && (
-                <AccordionItem value="achievements">
+                <AccordionItem value="achievements" className="border-b-0">
                   <AccordionTrigger className="px-4 text-lg font-semibold hover:no-underline data-[state=open]:text-primary">
                     <div className="flex items-center gap-3">
                       <Zap className="h-6 w-6 text-primary" /> Achievements
