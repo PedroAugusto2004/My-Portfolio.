@@ -1,3 +1,4 @@
+
 import { resumeData, type ExperienceEntry } from '@/config/resume-data';
 import SectionTitle from '@/components/ui/section-title-component';
 import AnimatedScrollWrapper from '@/components/ui/animated-scroll-wrapper';
@@ -6,17 +7,12 @@ import { Briefcase, CalendarDays, CheckCircle } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
 
+// Define projectPlaceholders array
+const projectPlaceholders = resumeData.experience.map(
+  (_, index) => `https://placehold.co/600x${400 + index * 10}.png` // Vary height slightly for visual difference
+);
+
 export default function ExperienceSection() {
-  const projectPlaceholders = [
-    "https://placehold.co/600x400.png", // For MediMentor
-    "https://placehold.co/600x400.png"  // For Muscles & Balance
-  ];
-  const projectHints = [
-    "healthcare technology",
-    "fitness app"
-  ];
-
-
   return (
     <section id="experience" className="bg-transparent">
       <div className="container mx-auto max-w-screen-xl px-4">
@@ -27,15 +23,15 @@ export default function ExperienceSection() {
         <div className="space-y-12">
           {resumeData.experience.map((exp: ExperienceEntry, index: number) => (
             <AnimatedScrollWrapper key={index} delay={`delay-${index * 100}`}>
-              <Card className="overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 bg-card"> {/* Added bg-card for content readability */}
+              <Card className="overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 bg-card">
                 <div className="grid md:grid-cols-2">
                   <div className="relative h-64 md:h-auto w-full overflow-hidden">
                      <Image 
-                        src={projectPlaceholders[index % projectPlaceholders.length]} 
+                        src={projectPlaceholders[index]} 
                         alt={`${exp.company} project image`} 
                         layout="fill" 
-                        objectFit="cover"
-                        data-ai-hint={projectHints[index % projectHints.length]}
+                        objectFit="cover" // Changed to cover for better placeholder filling
+                        data-ai-hint="project visual"
                       />
                   </div>
                   <div className="p-6 md:p-8">
