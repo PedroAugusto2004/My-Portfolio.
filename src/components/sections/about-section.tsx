@@ -9,7 +9,7 @@ import AnimatedScrollWrapper from '@/components/ui/animated-scroll-wrapper';
 
 export default function AboutSection() {
   return (
-    <section id="about" className="bg-slate-50">
+    <section id="about" className="bg-transparent">
       <div className="container mx-auto max-w-screen-lg px-4">
         <AnimatedScrollWrapper>
           <SectionTitle>About Me</SectionTitle>
@@ -64,7 +64,7 @@ export default function AboutSection() {
                             </span>
                           </div>
                           {cert.name === "CS50x: Introduction to Computer Science" && (
-                            <div className="mt-2 pl-7"> {/* Indent under the text */}
+                            <div className="mt-2 pl-7">
                               <Dialog>
                                 <DialogTrigger asChild>
                                   <button aria-label={`View ${cert.name} Certificate`} className="outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded">
@@ -96,8 +96,8 @@ export default function AboutSection() {
                               </Dialog>
                             </div>
                           )}
-                          {cert.name === "CS50AI: Introduction to Artificial Intelligence with Python" && (
-                            <div className="mt-2 pl-7"> {/* Indent under the text */}
+                           {cert.name === "CS50AI: Introduction to Artificial Intelligence with Python" && (
+                            <div className="mt-2 pl-7">
                               <Dialog>
                                 <DialogTrigger asChild>
                                   <button aria-label={`View ${cert.name} Certificate`} className="outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded">

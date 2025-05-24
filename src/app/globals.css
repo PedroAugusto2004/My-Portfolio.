@@ -13,7 +13,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
 
-    --primary: 215 28% 48%; /* Muted Slate Blue */
+    --primary: 220 60% 55%; /* Neutral Blue */
     --primary-foreground: 0 0% 100%; /* White */
 
     --secondary: 240 4.8% 95.9%; /* Light Gray - for secondary elements */
@@ -22,15 +22,15 @@
     --muted: 240 4.8% 95.9%;
     --muted-foreground: 240 3.8% 46.1%; /* Mid Gray - for muted text */
 
-    --accent: 215 25% 94%; /* Very Light Slate Blue/Gray */
-    --accent-foreground: 215 28% 38%; /* Darker Muted Slate Blue */
+    --accent: 220 50% 94%; /* Very Light Neutral Blue/Gray */
+    --accent-foreground: 220 60% 45%; /* Darker Neutral Blue */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 240 5.9% 90%; /* Light Gray border */
     --input: 240 5.9% 90%; /* Light Gray input background */
-    --ring: 215 28% 48%; /* Muted Slate Blue */
+    --ring: 220 60% 55%; /* Neutral Blue */
 
     --radius: 0.5rem;
 
@@ -43,6 +43,30 @@
     --sidebar-accent-foreground: var(--accent-foreground);
     --sidebar-border: var(--border);
     --sidebar-ring: var(--ring);
+
+    /* Futuristic Background Variables */
+    --futuristic-bg-angle-scroll: 145deg;
+    --futuristic-color-1-h: 220; /* Muted Blueish */
+    --futuristic-color-1-s: 25%;
+    --futuristic-color-1-l-light: 95%;
+    --futuristic-color-1-l-dark: 8%;
+    --futuristic-color-1-a: 0.5;
+
+    --futuristic-color-2-h: 240; /* Muted Indigo/Purple */
+    --futuristic-color-2-s: 20%;
+    --futuristic-color-2-l-light: 98%;
+    --futuristic-color-2-l-dark: 5%;
+    --futuristic-color-2-a: 0.4;
+
+    --futuristic-color-3-h: 200; /* Muted Cyan/Steel Blue */
+    --futuristic-color-3-s: 20%;
+    --futuristic-color-3-l-light: 96%;
+    --futuristic-color-3-l-dark: 7%;
+    --futuristic-color-3-a: 0.3;
+
+    --current-futuristic-color-1-l: var(--futuristic-color-1-l-light);
+    --current-futuristic-color-2-l: var(--futuristic-color-2-l-light);
+    --current-futuristic-color-3-l: var(--futuristic-color-3-l-light);
   }
 
   .dark {
@@ -55,7 +79,7 @@
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 215 35% 65%; /* Slightly Brighter Muted Slate Blue */
+    --primary: 220 55% 70%; /* Slightly Brighter Neutral Blue for Dark */
     --primary-foreground: 0 0% 100%; /* White */
 
     --secondary: 240 3.7% 15.9%; /* Dark Gray */
@@ -64,15 +88,15 @@
     --muted: 240 3.7% 15.9%;
     --muted-foreground: 240 5% 64.9%; /* Mid Gray */
 
-    --accent: 215 20% 20%; /* Dark Slate Blue/Gray */
-    --accent-foreground: 215 25% 85%; /* Light Muted Slate Blue */
+    --accent: 220 30% 25%; /* Dark Neutral Blue/Gray */
+    --accent-foreground: 220 50% 85%; /* Light Muted Neutral Blue */
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 240 3.7% 15.9%; /* Dark Gray border */
     --input: 240 3.7% 15.9%; /* Dark Gray input background */
-    --ring: 215 35% 65%; /* Slightly Brighter Muted Slate Blue */
+    --ring: 220 55% 70%; /* Slightly Brighter Neutral Blue for Dark */
 
     /* Sidebar specific colors - will inherit from the main theme */
     --sidebar-background: var(--background);
@@ -83,6 +107,11 @@
     --sidebar-accent-foreground: var(--accent-foreground);
     --sidebar-border: var(--border);
     --sidebar-ring: var(--ring);
+
+    /* Futuristic Background Variables for Dark Mode */
+    --current-futuristic-color-1-l: var(--futuristic-color-1-l-dark);
+    --current-futuristic-color-2-l: var(--futuristic-color-2-l-dark);
+    --current-futuristic-color-3-l: var(--futuristic-color-3-l-dark);
   }
 }
 
@@ -91,21 +120,44 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground font-sans; /* font-sans will be Lato */
+    @apply font-sans text-foreground;
     @apply antialiased;
+    
+    background: linear-gradient(
+      var(--futuristic-bg-angle-scroll),
+      hsla(var(--futuristic-color-1-h), var(--futuristic-color-1-s), var(--current-futuristic-color-1-l), var(--futuristic-color-1-a)) 0%,
+      hsla(var(--futuristic-color-2-h), var(--futuristic-color-2-s), var(--current-futuristic-color-2-l), var(--futuristic-color-2-a)) 50%,
+      hsla(var(--futuristic-color-3-h), var(--futuristic-color-3-s), var(--current-futuristic-color-3-l), var(--futuristic-color-3-a)) 100%
+    );
+    background-size: 300% 300%;
+    animation: futuristicBodyAnim 25s ease infinite alternate;
+    min-height: 100vh;
+    transition: background 0.5s ease-out; /* Smooth transition for color changes */
   }
+
+  .dark body {
+    /* CSS variables for dark mode are already set above, body will re-evaluate gradient */
+  }
+
+  @keyframes futuristicBodyAnim {
+    0% { background-position: 0% 0%; }
+    25% { background-position: 100% 0%; }
+    50% { background-position: 100% 100%; }
+    75% { background-position: 0% 100%; }
+    100% { background-position: 0% 0%; }
+  }
+
   section {
-    @apply w-full py-12 md:py-20 lg:py-24;
+    @apply w-full py-12 md:py-20 lg:py-24 bg-transparent; /* Make sections transparent */
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading tracking-tight font-semibold; /* font-heading will be Playfair Display, keeping font-semibold */
+    @apply font-heading tracking-tight font-semibold; 
   }
   h1 { @apply text-4xl sm:text-5xl md:text-6xl; }
   h2 { @apply text-3xl md:text-4xl; }
   h3 { @apply text-2xl md:text-3xl; }
 
   .section-title {
-    /* section-title is usually an h2, will inherit font-heading */
     @apply text-3xl font-bold tracking-tight text-primary sm:text-4xl md:text-5xl;
   }
 }

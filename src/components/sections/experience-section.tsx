@@ -18,7 +18,7 @@ export default function ExperienceSection() {
 
 
   return (
-    <section id="experience" className="bg-slate-50">
+    <section id="experience" className="bg-transparent">
       <div className="container mx-auto max-w-screen-xl px-4">
         <AnimatedScrollWrapper>
           <SectionTitle>Experience & Projects</SectionTitle>
@@ -27,7 +27,7 @@ export default function ExperienceSection() {
         <div className="space-y-12">
           {resumeData.experience.map((exp: ExperienceEntry, index: number) => (
             <AnimatedScrollWrapper key={index} delay={`delay-${index * 100}`}>
-              <Card className="overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+              <Card className="overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 bg-card"> {/* Added bg-card for content readability */}
                 <div className="grid md:grid-cols-2">
                   <div className="relative h-64 md:h-auto w-full overflow-hidden">
                      <Image 

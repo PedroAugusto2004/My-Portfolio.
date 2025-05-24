@@ -4,6 +4,9 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import Navbar from '@/components/layout/navbar';
 import Footer from '@/components/layout/footer';
+import { ThemeProvider } from '@/components/theme-provider';
+import ScrollReactiveBackground from '@/components/layout/scroll-reactive-background';
+
 
 export const metadata: Metadata = {
   title: 'Portfolio Pro | Pedro Augusto',
@@ -16,12 +19,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${lato.variable} ${playfairDisplay.variable} scroll-smooth`}>
-      <body className={`font-sans bg-background text-foreground`}>
-        <Navbar />
-        <main vaul-drawer-wrapper="" className="min-h-screen flex-1 bg-background">{children}</main>
-        <Footer />
-        <Toaster />
+    <html lang="en" className={`${lato.variable} ${playfairDisplay.variable} scroll-smooth`} suppressHydrationWarning>
+      <body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <ScrollReactiveBackground />
+          <Navbar />
+          <main vaul-drawer-wrapper="" className="min-h-screen flex-1 bg-transparent">{children}</main>
+          <Footer />
+          <Toaster />
+        </ThemeProvider>
       </body>
     </html>
   );
