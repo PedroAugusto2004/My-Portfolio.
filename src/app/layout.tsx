@@ -6,6 +6,7 @@ import Navbar from '@/components/layout/navbar';
 import Footer from '@/components/layout/footer';
 import { ThemeProvider } from '@/components/theme-provider';
 import ScrollReactiveBackground from '@/components/layout/scroll-reactive-background';
+import { ThemeToggle } from '@/components/theme-toggle';
 
 
 export const metadata: Metadata = {
@@ -31,6 +32,9 @@ export default function RootLayout({
           <Navbar />
           <main vaul-drawer-wrapper="" className="min-h-screen flex-1 bg-transparent">{children}</main>
           <Footer />
+          <div className="fixed bottom-4 right-4 z-50">
+            <ThemeToggle />
+          </div>
           <Toaster />
         </ThemeProvider>
       </body>

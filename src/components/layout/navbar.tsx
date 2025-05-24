@@ -26,7 +26,7 @@ export default function Navbar() {
           key={item.label}
           href={item.href}
           onClick={onItemClick}
-          className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-foreground hover:bg-accent/10 hover:text-primary transition-colors"
+          className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-foreground hover:bg-accent hover:text-primary transition-colors"
           aria-label={item.label}
         >
           <item.icon className="h-4 w-4" />
@@ -47,7 +47,7 @@ export default function Navbar() {
           <NavLinks />
         </nav>
 
-        <div className="md:hidden">
+        <div className="flex items-center md:hidden">
           <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" aria-label="Open menu">
