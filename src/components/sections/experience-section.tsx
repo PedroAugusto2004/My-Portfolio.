@@ -20,12 +20,12 @@ export default function ExperienceSection() {
             <AnimatedScrollWrapper key={index} delay={`delay-${index * 100}`}>
               <Card className="overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 bg-card">
                 <div className="grid md:grid-cols-2">
-                  <div className="relative h-64 md:h-80 w-full overflow-hidden">
-                     <Image 
-                        src="/images/exp.png" 
-                        alt={`${exp.company} project image`} 
-                        layout="fill" 
-                        objectFit="contain"
+                  <div className="relative h-80 md:h-[440px] w-full overflow-hidden"> {/* Increased height */}
+                     <Image
+                        src="/images/exp.png"
+                        alt={`${exp.company} project image`}
+                        layout="fill"
+                        objectFit="contain" // Ensures the entire image is visible
                         data-ai-hint="project visual"
                       />
                   </div>
