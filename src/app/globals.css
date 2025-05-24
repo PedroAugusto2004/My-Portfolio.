@@ -13,8 +13,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
 
-    --primary: 240 5.9% 10%; /* Very Dark Blue/Gray - for main interactive elements */
-    --primary-foreground: 0 0% 98%; /* Light Gray - for text on primary */
+    --primary: 215 28% 48%; /* Muted Slate Blue */
+    --primary-foreground: 0 0% 100%; /* White */
 
     --secondary: 240 4.8% 95.9%; /* Light Gray - for secondary elements */
     --secondary-foreground: 240 5.9% 10%; /* Dark Gray - for text on secondary */
@@ -22,19 +22,19 @@
     --muted: 240 4.8% 95.9%;
     --muted-foreground: 240 3.8% 46.1%; /* Mid Gray - for muted text */
 
-    --accent: 240 4.8% 95.9%; /* Light Gray - for accents */
-    --accent-foreground: 240 5.9% 10%; /* Dark Gray - for text on accent */
+    --accent: 215 25% 94%; /* Very Light Slate Blue/Gray */
+    --accent-foreground: 215 28% 38%; /* Darker Muted Slate Blue */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 240 5.9% 90%; /* Light Gray border */
     --input: 240 5.9% 90%; /* Light Gray input background */
-    --ring: 240 5.9% 10%; /* Dark Gray ring */
+    --ring: 215 28% 48%; /* Muted Slate Blue */
 
     --radius: 0.5rem;
 
-    /* Sidebar specific colors - aligned with main theme for minimalism */
+    /* Sidebar specific colors - will inherit from the main theme */
     --sidebar-background: var(--background);
     --sidebar-foreground: var(--foreground);
     --sidebar-primary: var(--primary);
@@ -46,26 +46,35 @@
   }
 
   .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
+    --background: 240 10% 3.9%; /* Darkest Gray */
+    --foreground: 0 0% 98%; /* Light Gray */
+
     --card: 240 10% 3.9%;
     --card-foreground: 0 0% 98%;
+
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
+
+    --primary: 215 35% 65%; /* Slightly Brighter Muted Slate Blue */
+    --primary-foreground: 0 0% 100%; /* White */
+
+    --secondary: 240 3.7% 15.9%; /* Dark Gray */
+    --secondary-foreground: 0 0% 98%; /* Light Gray */
+
     --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
+    --muted-foreground: 240 5% 64.9%; /* Mid Gray */
+
+    --accent: 215 20% 20%; /* Dark Slate Blue/Gray */
+    --accent-foreground: 215 25% 85%; /* Light Muted Slate Blue */
+
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 0 0% 98%;
 
+    --border: 240 3.7% 15.9%; /* Dark Gray border */
+    --input: 240 3.7% 15.9%; /* Dark Gray input background */
+    --ring: 215 35% 65%; /* Slightly Brighter Muted Slate Blue */
+
+    /* Sidebar specific colors - will inherit from the main theme */
     --sidebar-background: var(--background);
     --sidebar-foreground: var(--foreground);
     --sidebar-primary: var(--primary);
