@@ -20,13 +20,14 @@ export default function ExperienceSection() {
             <AnimatedScrollWrapper key={index} delay={`delay-${index * 100}`}>
               <Card className="overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 bg-card">
                 <div className="grid md:grid-cols-2">
-                  <div className="relative h-64 md:h-auto w-full overflow-hidden">
+                  {/* Changed md:h-auto to md:h-80 to make the image container smaller on medium screens and up */}
+                  <div className="relative h-64 md:h-80 w-full overflow-hidden">
                      <Image 
-                        src="/images/experience.png" // Updated to use the specific local image
+                        src="/images/experience.png"
                         alt={`${exp.company} project image`} 
                         layout="fill" 
                         objectFit="cover"
-                        data-ai-hint="project showcase" // Updated AI hint
+                        data-ai-hint="project showcase"
                       />
                   </div>
                   <div className="p-6 md:p-8">
