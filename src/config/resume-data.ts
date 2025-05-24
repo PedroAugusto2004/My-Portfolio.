@@ -1,3 +1,4 @@
+
 export interface Skill {
   name: string;
   description?: string;
@@ -121,8 +122,8 @@ export const resumeData = {
       ],
       technologies: ["AWS Lambda", "Firebase Cloud Functions", "AWS Cognito", "Firebase Auth", "AWS Amplify", "GitHub Actions", "JavaScript", "HTML/CSS", "Python", "AWS CloudFront", "Next.js", "React.js", "Tailwind CSS"],
       projectLinks: [
-        { name: "MediMentor GitHub", url: "#" },
-        { name: "Muscles & Balance GitHub", url: "#" }
+        { name: "MediMentor GitHub", url: "https://github.com/PedroAugusto2004/MediMentor" },
+        { name: "Muscles & Balance GitHub", url: "https://github.com/PedroAugusto2004/Muscles-e-Balance" }
       ]
     },
   ] as ExperienceEntry[],
@@ -161,3 +162,4 @@ ${this.skills.flatMap(s => s.skills).slice(0,5).map(skill => skill.name).join(',
     `;
   }
 };
+
