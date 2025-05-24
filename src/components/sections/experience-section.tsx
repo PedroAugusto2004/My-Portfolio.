@@ -22,7 +22,7 @@ export default function ExperienceSection() {
                 <div className="grid md:grid-cols-2">
                   <div className="relative h-64 md:h-80 w-full overflow-hidden">
                      <Image 
-                        src="/images/experience.png" 
+                        src="/images/exp.png" 
                         alt={`${exp.company} project image`} 
                         layout="fill" 
                         objectFit="contain"
