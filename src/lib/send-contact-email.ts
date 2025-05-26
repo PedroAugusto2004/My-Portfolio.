@@ -1,10 +1,21 @@
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY!);
+// Lazy initialization to avoid requiring the API key at build time
+let resend: Resend | null = null;
+function getResend() {
+  if (!resend) {
+    if (!process.env.RESEND_API_KEY) {
+      throw new Error('Missing RESEND_API_KEY environment variable');
+    }
+    resend = new Resend(process.env.RESEND_API_KEY);
+  }
+  return resend;
+}
 
 export async function sendContactEmail({ name, email, message }: { name: string; email: string; message: string }) {
   try {
-    const { data, error } = await resend.emails.send({
+    const resendInstance = getResend();
+    const { data, error } = await resendInstance.emails.send({
       from: 'Contact Form <onboarding@resend.dev>',
       to: ['pedro.augsuto07.dev@gmail.com'],
       subject: `New Contact Message from ${name}`,

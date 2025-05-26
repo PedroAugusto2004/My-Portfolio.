@@ -5,3 +5,10 @@ runConfig:
   # Increase this value if you'd like to automatically spin up
   # more instances in response to increased traffic.
   maxInstances: 1
+
+env:
+  - variable: RESEND_API_KEY
+    value: "re_XwG7mWth_PutPCxwDhEHKcukjjSQtHybM"
+    availability:
+      - BUILD
+      - RUNTIME
