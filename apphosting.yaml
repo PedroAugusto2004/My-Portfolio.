@@ -8,7 +8,7 @@ runConfig:
 
 env:
   - variable: RESEND_API_KEY
-    value: "re_XwG7mWth_PutPCxwDhEHKcukjjSQtHybM"
+    secret: projects/882705907236/secrets/RESEND_API_KEY/versions/latest
     availability:
       - BUILD
       - RUNTIME
