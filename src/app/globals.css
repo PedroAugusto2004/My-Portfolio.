@@ -73,8 +73,8 @@
     --background: 220 15% 15%; /* Very Dark Bluish Gray */
     --foreground: 220 30% 85%; /* Light Bluish Gray */
 
-    --card: 220 15% 18%; /* Slightly lighter than background for depth */
-    --card-foreground: 220 30% 88%;
+    --card: 220 15% 20%; /* Increased lightness for better contrast */
+    --card-foreground: 220 30% 90%; /* Adjusted for new card background */
 
     --popover: 220 15% 12%; /* Darker for popovers */
     --popover-foreground: 220 30% 90%;
