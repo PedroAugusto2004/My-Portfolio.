@@ -1,4 +1,3 @@
-
 export interface Skill {
   name: string;
   description?: string;
@@ -62,6 +61,7 @@ export const resumeData = {
     { name: "CS50x: Introduction to Computer Science", issuer: "Harvard University" },
     { name: "CS50AI: Introduction to Artificial Intelligence with Python", issuer: "Harvard University" },
     { name: "CS50C: Introduction to Cybersecurity", issuer: "Harvard University" },
+    { name: "Front End Development Certification", issuer: "freeCodeCamp" },
     { name: "100+ hours of training", issuer: "DIO (web dev, cloud, software engineering)" },
   ] as Certification[],
   achievements: [
