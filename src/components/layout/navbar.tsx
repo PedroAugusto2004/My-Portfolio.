@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from 'next/link';
@@ -40,7 +39,8 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 max-w-screen-xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="#hero" className="flex items-center gap-2" aria-label="Homepage">
-          <span className="text-2xl font-bold text-primary tracking-tight">{resumeData.name}</span>
+          <img src="/images/blue logo.png" alt="Logo" className="h-8 w-8 mr-2" />
+          <span className="navbar-header">{resumeData.name}</span>
         </Link>
 
         <nav className="hidden md:flex items-center space-x-1">
@@ -58,7 +58,8 @@ export default function Navbar() {
               <SheetHeader className="mb-6 text-left">
                  <SheetTitle className="sr-only">Mobile Menu</SheetTitle>
                  <Link href="#hero" className="flex items-center gap-2" onClick={() => setMobileMenuOpen(false)} aria-label="Homepage">
-                    <span className="text-xl font-bold text-primary">{resumeData.name}</span>
+                    <img src="/images/blue logo.png" alt="Logo" className="h-7 w-7 mr-2" />
+                    <span className="navbar-header">{resumeData.name}</span>
                   </Link>
               </SheetHeader>
               <nav className="flex flex-col space-y-2">

@@ -10,11 +10,11 @@ import { ThemeToggle } from '@/components/theme-toggle';
 
 
 export const metadata: Metadata = {
-  title: 'Portfolio Pro | Pedro Augusto',
+  title: 'Portfolio | Pedro Augusto',
   description: 'Personal portfolio of Pedro Augusto, Full Stack Developer & Cloud Specialist.',
   icons: {
-    icon: '/images/logo.png', // Updated to use the correct logo path
-    shortcut: '/images/logo.png', // Added shortcut icon for header image
+    icon: '/images/blue logo.png', // Updated to use the correct logo path
+    shortcut: '/images/blue logo.png', // Added shortcut icon for header image
   },
 };
 

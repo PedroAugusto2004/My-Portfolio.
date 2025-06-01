@@ -1,4 +1,3 @@
-
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { resumeData } from '@/config/resume-data';
@@ -10,7 +9,7 @@ export default function HeroSection() {
     <section id="hero" className="relative min-h-[calc(100vh-4rem)] flex items-center justify-center py-12 md:py-20 lg:py-24 bg-transparent">
       <div className="container mx-auto max-w-screen-lg px-4 text-center">
         <AnimatedScrollWrapper animationClassName="animate-fade-in-up">
-          <h1 className="text-5xl font-bold tracking-tight text-primary sm:text-6xl md:text-7xl lg:text-8xl">
+          <h1 className="hero-header fancy-header">
             {resumeData.name}
           </h1>
         </AnimatedScrollWrapper>
