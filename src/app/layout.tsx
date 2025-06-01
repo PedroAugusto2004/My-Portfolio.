@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import { lato, playfairDisplay } from '@/lib/fonts';
 import './globals.css';
@@ -12,6 +13,9 @@ import { ThemeToggle } from '@/components/theme-toggle';
 export const metadata: Metadata = {
   title: 'Portfolio Pro | Pedro Augusto',
   description: 'Personal portfolio of Pedro Augusto, Full Stack Developer & Cloud Specialist.',
+  icons: {
+    icon: '/logo.png', // This will set logo.png as the favicon
+  },
 };
 
 export default function RootLayout({
