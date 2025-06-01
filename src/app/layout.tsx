@@ -1,4 +1,3 @@
-
 import type { Metadata } from 'next';
 import { lato, playfairDisplay } from '@/lib/fonts';
 import './globals.css';
@@ -14,7 +13,8 @@ export const metadata: Metadata = {
   title: 'Portfolio Pro | Pedro Augusto',
   description: 'Personal portfolio of Pedro Augusto, Full Stack Developer & Cloud Specialist.',
   icons: {
-    icon: '/logo.png', // This will set logo.png as the favicon
+    icon: '/images/logo.png', // Updated to use the correct logo path
+    shortcut: '/images/logo.png', // Added shortcut icon for header image
   },
 };
 
