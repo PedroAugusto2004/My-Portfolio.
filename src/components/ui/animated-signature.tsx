@@ -17,10 +17,30 @@ export default function AnimatedSignature({ className, style }: AnimatedSignatur
     path.style.strokeDasharray = `${length}`;
     path.style.strokeDashoffset = `${length}`;
     path.style.transition = 'stroke-dashoffset 2.5s cubic-bezier(0.77,0,0.18,1)';
-    setTimeout(() => {
-      path.style.strokeDashoffset = '0';
-    }, 300); // slight delay for effect
+    // Only animate on mount if not hovered
+    if (!path.closest('.animated-signature:hover')) {
+      setTimeout(() => {
+        path.style.strokeDashoffset = '0';
+      }, 300);
+    }
+    // Clean up: reset on unmount
+    return () => {
+      path.style.strokeDashoffset = `${length}`;
+    };
   }, []);
+
+  // Handle hover animation
+  const handleMouseEnter = () => {
+    const path = pathRef.current;
+    if (!path) return;
+    const length = path.getTotalLength();
+    path.style.transition = 'none';
+    path.style.strokeDashoffset = `${length}`;
+    // Force reflow to restart transition
+    void path.getBoundingClientRect();
+    path.style.transition = 'stroke-dashoffset 2.5s cubic-bezier(0.77,0,0.18,1)';
+    path.style.strokeDashoffset = '0';
+  };
 
   return (
     <svg
@@ -29,6 +49,7 @@ export default function AnimatedSignature({ className, style }: AnimatedSignatur
       height="115"
       viewBox="0 0 165 115"
       className={className}
+      onMouseEnter={handleMouseEnter}
     >
       <path
         ref={pathRef}
