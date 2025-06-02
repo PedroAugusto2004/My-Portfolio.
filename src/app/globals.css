@@ -191,4 +191,16 @@
     color: #385e92; 
     font-style: normal;
   }
+
+  /* Animated signature for hero section */
+  .animated-signature {
+    max-width: 220px;
+    height: 80px;
+    display: block;
+    margin: 0 auto;
+    color: #000;
+  }
+  .dark .animated-signature {
+    color: #fff;
+  }
 }

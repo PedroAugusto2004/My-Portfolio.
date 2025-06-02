@@ -3,15 +3,22 @@ import { Button } from '@/components/ui/button';
 import { resumeData } from '@/config/resume-data';
 import { Github, Linkedin, Mail, FileText } from 'lucide-react';
 import AnimatedScrollWrapper from '@/components/ui/animated-scroll-wrapper';
+import AnimatedSignature from '@/components/ui/animated-signature';
 
 export default function HeroSection() {
   return (
     <section id="hero" className="relative min-h-[calc(100vh-4rem)] flex items-center justify-center py-12 md:py-20 lg:py-24 bg-transparent">
       <div className="container mx-auto max-w-screen-lg px-4 text-center">
         <AnimatedScrollWrapper animationClassName="animate-fade-in-up">
-          <h1 className="hero-header fancy-header">
-            {resumeData.name}
-          </h1>
+          <div className="flex flex-col items-center">
+            <span className="mb-2">
+              {/* Animated SVG Signature */}
+              <AnimatedSignature className="animated-signature" />
+            </span>
+            <h1 className="hero-header fancy-header">
+              {resumeData.name}
+            </h1>
+          </div>
         </AnimatedScrollWrapper>
         <AnimatedScrollWrapper animationClassName="animate-fade-in-up" delay="delay-100">
           <p className="mt-4 text-xl font-medium text-foreground/80 sm:text-2xl md:text-3xl">
