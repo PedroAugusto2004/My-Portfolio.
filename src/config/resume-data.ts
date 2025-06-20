@@ -109,6 +109,23 @@ export const resumeData = {
   ] as SkillCategory[],
   experience: [
     {
+      role: "Founder & Full Stack Developer",
+      company: "FinE – Financial Education Platform (Startup)",
+      period: "Jan 2025 – Present",
+      description: "Building a modern, responsive financial literacy platform targeting students and working professionals.",
+      responsibilities: [
+        "Developed the frontend with React, TypeScript, Vite, and Tailwind CSS, leveraging shadcn/ui for scalable UI components.",
+        "Engineered the backend using Supabase (PostgreSQL + Auth), with secure, real-time data handling and SQL-driven migrations.",
+        "Integrated i18n for multilingual support and optimized content delivery through PostCSS and Bun tooling.",
+        "Implemented robust development workflows using ESLint, JSON-based configs, and Node.js ecosystem tools.",
+        "Conducted market research and user surveys to validate product-market fit and inform feature prioritization."
+      ],
+      technologies: [
+        "React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui", "Supabase", "PostgreSQL", "i18n", "PostCSS", "Bun", "ESLint", "Node.js"
+      ],
+      projectLinks: []
+    },
+    {
       role: "Full-Stack Developer",
       company: "MediMentor & Muscles & Balance",
       period: "2024 - 2025",
