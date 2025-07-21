@@ -110,7 +110,7 @@ export const resumeData = {
   experience: [
     {
       role: "Founder & Full Stack Developer",
-      company: "FinE – Financial Education Platform (Startup)",
+      company: "FinE – Financial Education Platform (Startup in development)",
       period: "Jan 2025 – Present",
       description: "Building a modern, responsive financial literacy platform targeting students and working professionals.",
       responsibilities: [
@@ -140,7 +140,9 @@ export const resumeData = {
       technologies: ["AWS Lambda", "Firebase Cloud Functions", "AWS Cognito", "Firebase Auth", "AWS Amplify", "GitHub Actions", "JavaScript", "HTML/CSS", "Python", "AWS CloudFront", "Next.js", "React.js", "Tailwind CSS"],
       projectLinks: [
         { name: "MediMentor GitHub", url: "https://github.com/PedroAugusto2004/MediMentor" },
-        { name: "Muscles & Balance GitHub", url: "https://github.com/PedroAugusto2004/Muscles-e-Balance" }
+        { name: "Muscles & Balance GitHub", url: "https://github.com/PedroAugusto2004/Muscles-e-Balance" },
+        { name: "Visit Muscles & Balance", url: "https://muscles-and-balance-7.web.app" },
+        { name: "Visit MediMentor", url: "https://main.do8zwgfpt20yc.amplifyapp.com" }
       ]
     },
   ] as ExperienceEntry[],

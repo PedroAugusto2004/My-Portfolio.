@@ -3,7 +3,7 @@ import { resumeData, type ExperienceEntry } from '@/config/resume-data';
 import SectionTitle from '@/components/ui/section-title-component';
 import AnimatedScrollWrapper from '@/components/ui/animated-scroll-wrapper';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Briefcase, CalendarDays, CheckCircle, Github } from 'lucide-react';
+import { Briefcase, CalendarDays, CheckCircle, Github, ExternalLink } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -62,16 +62,28 @@ export default function ExperienceSection() {
 
                     {exp.projectLinks && exp.projectLinks.length > 0 && (
                       <div>
-                        <h4 className="font-semibold text-md text-primary mb-3">Project Repositories:</h4>
+                        <h4 className="font-semibold text-md text-primary mb-3">Project Links:</h4>
                         <div className="flex flex-wrap gap-3">
-                          {exp.projectLinks.map((link, linkIndex) => (
-                            <Button asChild variant="outline" size="sm" key={linkIndex} className="hover:bg-accent/80">
-                              <Link href={link.url} target="_blank" rel="noopener noreferrer" aria-label={`View ${link.name} on GitHub`}>
-                                <Github className="mr-2 h-4 w-4" />
-                                {link.name}
-                              </Link>
-                            </Button>
-                          ))}
+                          {exp.projectLinks.map((link, linkIndex) => {
+                            const isGithubLink = link.name.toLowerCase().includes('github');
+                            const isVisitLink = link.name.toLowerCase().includes('visit');
+                            
+                            return (
+                              <Button 
+                                asChild 
+                                variant={isVisitLink ? "default" : "outline"} 
+                                size="sm" 
+                                key={linkIndex} 
+                                className={isVisitLink ? "bg-primary hover:bg-primary/90 text-white shadow-md" : "hover:bg-accent/80"}
+                              >
+                                <Link href={link.url} target="_blank" rel="noopener noreferrer" aria-label={`${link.name}`}>
+                                  {isGithubLink && <Github className="mr-2 h-4 w-4" />}
+                                  {isVisitLink && <ExternalLink className="mr-2 h-4 w-4" />}
+                                  {link.name}
+                                </Link>
+                              </Button>
+                            );
+                          })}
                         </div>
                       </div>
                     )}
