@@ -11,7 +11,7 @@
   
   **🏆 VOX ASTRA Hackathon Winner | $300k Prize Pool | Selected from 500+ Teams**
   
-  [🌐 Live Portfolio](https://your-portfolio-url.com) • [📧 Contact](mailto:pedro.augsuto07.dev@gmail.com) • [💼 LinkedIn](https://www.linkedin.com/in/pedro-augusto-cabral-oliveira/)
+  [🌐 Live Portfolio](https://pedrodev.website) • [📧 Contact](mailto:pedro.augsuto07.dev@gmail.com) • [💼 LinkedIn](https://www.linkedin.com/in/pedro-augusto-cabral-oliveira/)
 </div>
 
 ---
