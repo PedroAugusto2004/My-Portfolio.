@@ -4,7 +4,7 @@ import SectionTitle from '@/components/ui/section-title-component';
 import AnimatedScrollWrapper from '@/components/ui/animated-scroll-wrapper';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Brain, Laptop, Server, LanguagesIcon } from 'lucide-react';
+import { Brain, Monitor, Server, Code2, Wrench, Users } from 'lucide-react';
 import {
   Tooltip,
   TooltipContent,
@@ -13,10 +13,12 @@ import {
 } from "@/components/ui/tooltip";
 
 const categoryIcons: { [key: string]: React.ElementType } = {
-  "Frontend Development": Laptop,
-  "Backend Development": Server,
-  "Cloud & DevOps": Server,
-  "Languages": LanguagesIcon,
+  "Code2": Code2,
+  "Monitor": Monitor,
+  "Server": Server,
+  "Brain": Brain,
+  "Wrench": Wrench,
+  "Users": Users,
   "Default": Brain,
 };
 
@@ -31,7 +33,7 @@ export default function SkillsSection() {
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2">
             {resumeData.skills.map((category: SkillCategory, index: number) => {
-              const IconComponent = categoryIcons[category.category] || categoryIcons["Default"];
+              const IconComponent = categoryIcons[category.icon || "Default"] || categoryIcons["Default"];
               return (
                 <AnimatedScrollWrapper key={category.category} delay={`delay-${index * 100}`}>
                   <Card className="h-full shadow-md hover:shadow-lg transition-shadow duration-300 bg-card">

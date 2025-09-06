@@ -6,6 +6,7 @@ export interface Skill {
 export interface SkillCategory {
   category: string;
   skills: Skill[];
+  icon?: string;
 }
 
 export interface Certification {
@@ -42,14 +43,14 @@ export interface ExperienceEntry {
 
 export const resumeData = {
   name: "Pedro Augusto",
-  title: "Full Stack Developer | AWS & Firebase Cloud Specialist",
+  title: "Full-Stack Developer | Web & App Development Specialist",
   contact: {
     email: "pedro.augsuto07.dev@gmail.com",
     linkedin: "https://www.linkedin.com/in/pedro-augusto-cabral-oliveira/",
     github: "https://github.com/PedroAugusto2004", 
     portfolioUrl: "", // This website, will be populated dynamically if needed
   },
-  summary: "Full-Stack Developer with hands-on expertise in AWS and Firebase cloud platforms. Proficient in JavaScript, Python, and C, with a strong focus on building scalable, secure, and serverless web applications. Experienced in building modern UIs, optimizing performance, and architecting robust, cloud-native solutions.",
+  summary: "AI-first Full-Stack Engineer — shipped production LLM agents & RAG systems (Google Gemini, Vercel/AWS). Deployed Google Gemini 1.5-Flash chat flows, serverless ML APIs, and CI/CD-hardened deployments (AWS, Vercel). Focused on verifiable, observable AI features and reducing hallucination through KB + verification layers.",
   education: [
     {
       degree: "B.S. in Analysis and Systems Development",
@@ -72,77 +73,120 @@ export const resumeData = {
   ] as Achievement[],
   skills: [
     {
-      category: "Frontend Development",
-      skills: [
-        { name: "HTML5" }, { name: "CSS3" }, { name: "JavaScript" }, { name: "TypeScript" }, 
-        { name: "React.js" }, { name: "Next.js" }, { name: "Tailwind CSS" }, { name: "Bootstrap" },
-        { name: "Responsive & Mobile-First Design" }, { name: "UI/UX Optimization" },
-      ],
-    },
-    {
-      category: "Backend Development",
-      skills: [
-        { name: "Python" }, { name: "C" }, { name: "Node.js" }, { name: "Express.js" },
-        { name: "RESTful APIs" }, { name: "GraphQL APIs" }, { name: "Authentication & Security (JWT, OAuth)" },
-      ],
-    },
-    {
-      category: "Cloud & DevOps",
-      skills: [
-        { name: "AWS Lambda" }, { name: "AWS API Gateway" }, { name: "AWS IAM" }, { name: "AWS Cognito" },
-        { name: "AWS CloudWatch" }, { name: "AWS CloudFront" }, { name: "AWS Amplify" }, { name: "AWS CloudFormation" },
-        { name: "AWS Elastic Beanstalk" }, { name: "AWS Key Management Service (KMS)" },
-        { name: "Firebase Authentication" }, { name: "Firebase Firestore" }, { name: "Firebase Realtime Database" },
-        { name: "Firebase Hosting" }, { name: "Firebase Cloud Functions" }, { name: "Firebase Cloud Messaging (FCM)" },
-        { name: "CI/CD & Deployment" }, { name: "Serverless Framework" }, { name: "GitHub Actions" },
-        { name: "Docker" }, { name: "Kubernetes" },
-      ],
-    },
-    {
       category: "Languages",
+      icon: "Code2",
       skills: [
-        { name: "English", description: "Fluent" },
-        { name: "Portuguese", description: "Native" },
-        { name: "Spanish", description: "Intermediate" },
+        { name: "Python" }, { name: "JavaScript" }, { name: "TypeScript" }, { name: "SQL" }, { name: "C# / .NET" }, { name: "C" },
+      ],
+    },
+    {
+      category: "Frontend",
+      icon: "Monitor",
+      skills: [
+        { name: "React" }, { name: "Next.js" }, { name: "Tailwind" }, { name: "Framer Motion" }, { name: "HTML/CSS" }, 
+        { name: "Bootstrap" }, { name: "Responsive & Mobile-First Design" }, { name: "UI/UX Optimization" },
+      ],
+    },
+    {
+      category: "Backend / Infra",
+      icon: "Server",
+      skills: [
+        { name: "Node.js" }, { name: "Express.js" }, { name: "AWS Lambda" }, { name: "AWS API Gateway" }, { name: "AWS Amplify" }, 
+        { name: "AWS CloudFront" }, { name: "AWS Cognito" }, { name: "AWS IAM" }, { name: "AWS CloudFormation" }, 
+        { name: "AWS Elastic Beanstalk" }, { name: "AWS Key Management Service (KMS)" }, { name: "Vercel" }, 
+        { name: "Serverless" }, { name: "REST APIs" }, { name: "GraphQL APIs" }, { name: "Authentication & Security (JWT, OAuth)" },
+      ],
+    },
+    {
+      category: "Data & ML",
+      icon: "Brain",
+      skills: [
+        { name: "RAG pipelines" }, { name: "LLM prompt engineering" }, { name: "Google Gemini" }, 
+        { name: "ChatGPT" }, { name: "Claude-Sonnet" }, { name: "Amazon Q" }, { name: "scikit-learn" }, 
+        { name: "PostgreSQL" }, { name: "telemetry & monitoring" },
+      ],
+    },
+    {
+      category: "Tools",
+      icon: "Wrench",
+      skills: [
+        { name: "GitHub Actions" }, { name: "Supabase" }, { name: "Firebase" }, { name: "Firebase Authentication" }, 
+        { name: "Firebase Firestore" }, { name: "Firebase Realtime Database" }, { name: "Firebase Hosting" }, 
+        { name: "Firebase Cloud Functions" }, { name: "Firebase Cloud Messaging (FCM)" }, { name: "CloudWatch" }, 
+        { name: "CI/CD" }, { name: "Docker" }, { name: "Kubernetes" }, { name: "Serverless Framework" },
+      ],
+    },
+    {
+      category: "Other",
+      icon: "Users",
+      skills: [
+        { name: "Product → deploy ownership" }, { name: "rapid prototyping" }, 
+        { name: "bilingual (PT/EN)" }, { name: "Spanish", description: "Intermediate" }, 
+        { name: "English", description: "Fluent" }, { name: "Portuguese", description: "Native" },
       ],
     },
   ] as SkillCategory[],
   experience: [
     {
-      role: "Founder & Full Stack Developer",
-      company: "FinE – Financial Education Platform (Startup in development)",
-      period: "Jan 2025 – Present",
-      description: "Building a modern, responsive financial literacy platform targeting students and working professionals.",
+      role: "AI Developer",
+      company: "Outlier",
+      period: "Remote • 2025 – Present",
+      description: "LLM-powered agents and production prompt engineering with automated testing pipelines and serverless ML APIs.",
       responsibilities: [
-        "Developed the frontend with React, TypeScript, Vite, and Tailwind CSS, leveraging shadcn/ui for scalable UI components.",
-        "Engineered the backend using Supabase (PostgreSQL + Auth), with secure, real-time data handling and SQL-driven migrations.",
-        "Integrated i18n for multilingual support and optimized content delivery through PostCSS and Bun tooling.",
-        "Implemented robust development workflows using ESLint, JSON-based configs, and Node.js ecosystem tools.",
-        "Conducted market research and user surveys to validate product-market fit and inform feature prioritization."
+        "Built and fine-tuned LLM-powered agents (ChatGPT, Claude-Sonnet, Amazon Q) and production prompt engineering flows, improving output relevance and consistency.",
+        "Designed AI-driven testing pipelines and automated test-case generation, increasing automated coverage and reducing manual QA cycles.",
+        "Deployed a serverless ML churn-prediction API (Python, scikit-learn, AWS Lambda) with telemetry and automated evaluation for production monitoring."
       ],
-      technologies: [
-        "React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui", "Supabase", "PostgreSQL", "i18n", "PostCSS", "Bun", "ESLint", "Node.js"
-      ],
+      technologies: ["ChatGPT", "Claude-Sonnet", "Amazon Q", "Python", "scikit-learn", "AWS Lambda", "LLM Prompt Engineering"],
       projectLinks: []
     },
     {
-      role: "Full-Stack Developer",
-      company: "MediMentor & Muscles & Balance",
-      period: "2024 - 2025",
-      description: "Developed and deployed two cloud-native platforms focused on healthcare and fitness. MediMentor is an AI-powered medical assistant offering symptom analysis using APIs like Isabel Healthcare and Healthwise, serving users with secure authentication via AWS Cognito and scalable serverless infrastructure on AWS Lambda, CloudFront, and Amplify. Muscles & Balance delivers personalized nutrition, workout planning, and macro calculations, leveraging Firebase Authentication, Firestore, and a Python backend that reduced API response time by 30%.",
+      role: "Full Stack Developer",
+      company: "Megaphoton – Solar Energy",
+      period: "Remote • 2025",
+      description: "Bilingual conversational assistant powered by Google Gemini 1.5-Flash with RAG pipeline and WhatsApp escalation for solar energy company.",
       responsibilities: [
-        "Architected serverless backend with AWS Lambda and Firebase Cloud Functions, managing over 20+ secure API endpoints for real-time data interactions.",
-        "Deployed scalable cloud infrastructure with CI/CD pipelines via AWS Amplify and GitHub Actions.",
-        "Designed responsive, mobile-first UIs using JavaScript, HTML/CSS, and Amplify, ensuring seamless UX across devices.",
-        "Implemented secure authentication flows with AWS Cognito and Firebase Auth, handling login, authorization, and session management.",
-        "Optimized app performance with AWS CloudFront, cutting load times by 40%, and reduced backend latency through efficient API design.",
+        "Implemented a bilingual (PT/EN) conversational assistant powered by Google Gemini 1.5-Flash, with language detection and persistent context.",
+        "Built a RAG pipeline + knowledge base and verification layers to minimize hallucinations and ensure company-data correctness.",
+        "Implemented WhatsApp escalation for human handoff and quick-action flows for common requests; improved customer self-service by 25%.",
+        "Production deployment: Vercel serverless functions, env-secure API integration, rate-limit planning, robust fallback/error handling, mobile-optimized UX (React + TypeScript + Framer Motion + Tailwind)."
       ],
-      technologies: ["AWS Lambda", "Firebase Cloud Functions", "AWS Cognito", "Firebase Auth", "AWS Amplify", "GitHub Actions", "JavaScript", "HTML/CSS", "Python", "AWS CloudFront", "Next.js", "React.js", "Tailwind CSS"],
+      technologies: ["Google Gemini 1.5-Flash", "Vercel", "React", "TypeScript", "Framer Motion", "Tailwind", "RAG Pipeline", "WhatsApp API"],
+      projectLinks: [
+        { name: "Megaphoton GitHub", url: "https://github.com/PedroAugusto2004/megaphoton" },
+        { name: "Visit Megaphoton", url: "https://www.megaphoton.com.br/" }]
+    },
+    {
+      role: "Full Stack Developer",
+      company: "MediMentor",
+      period: "Remote • 2024 – 2025",
+      description: "AI-driven medical platform providing symptom analysis and differential diagnosis with clinical-grade data sourcing.",
+      responsibilities: [
+        "Integrated Isabel Healthcare API to power AI-driven symptom analysis and differential diagnosis, ensuring clinical-grade data sourcing.",
+        "Architected serverless backend (AWS Lambda, API Gateway) with secure auth (Cognito) and production monitoring (CloudWatch), enabling reliable real-time interactions.",
+        "Implemented frontend hosting and CI/CD via AWS Amplify and CloudFront for fast, globally distributed delivery.",
+        "Built analytics dashboards and monitoring to track system health and performance (telemetry & logging)."
+      ],
+      technologies: ["AWS Lambda", "AWS API Gateway", "AWS Cognito", "AWS CloudWatch", "AWS Amplify", "AWS CloudFront", "Isabel Healthcare API"],
       projectLinks: [
         { name: "MediMentor GitHub", url: "https://github.com/PedroAugusto2004/MediMentor" },
-        { name: "Muscles & Balance GitHub", url: "https://github.com/PedroAugusto2004/Muscles-e-Balance" },
-        { name: "Visit Muscles & Balance", url: "https://muscles-and-balance-7.web.app" },
         { name: "Visit MediMentor", url: "https://main.do8zwgfpt20yc.amplifyapp.com" }
+      ]
+    },
+    {
+      role: "Full Stack Developer",
+      company: "Muscles & Balance",
+      period: "Remote • 2023 – 2025",
+      description: "Full-stack health & fitness platform with secure authentication, workout tracking, and interactive analytics dashboards.",
+      responsibilities: [
+        "Built first full-stack health & fitness platform with secure authentication, workout tracking, and interactive analytics dashboards; established CI/CD pipelines (AWS Amplify, GitHub Actions) for rapid, reliable releases.",
+        "Implemented realtime UX features (progress tracking and dashboards) and telemetry to measure performance and user flows.",
+        "Led end-to-end development of a fitness app: product design → auth → real-time dashboards → CI/CD and deployments. This project passed by MLH Fellowship which validates its maturity."
+      ],
+      technologies: ["AWS Amplify", "GitHub Actions", "React.js", "Firebase Auth", "Firebase Firestore", "Real-time Analytics"],
+      projectLinks: [
+        { name: "Muscles & Balance GitHub", url: "https://github.com/PedroAugusto2004/Muscles-e-Balance" },
+        { name: "Visit Muscles & Balance", url: "https://muscles-and-balance-7.web.app" }
       ]
     },
   ] as ExperienceEntry[],
