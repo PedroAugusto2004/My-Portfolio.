@@ -21,7 +21,7 @@
 A modern, responsive portfolio showcasing my journey as an **AI-First Full-Stack Engineer** with production experience in LLM agents, RAG systems, and serverless architectures. Built with cutting-edge technologies and deployed on enterprise-grade infrastructure.
 
 ### ✨ Key Highlights
-- 🤖 **AI Integration**: Google Gemini 1.5-Flash chat flows and RAG pipelines
+- 🤖 **AI Integration**: Google Gemini 2.5-Flash chat flows and RAG pipelines
 - ☁️ **Cloud-Native**: AWS Lambda, Vercel serverless, Firebase integration
 - 🎨 **Modern UI/UX**: Framer Motion animations, responsive design, dark/light themes
 - 🔒 **Production-Ready**: CI/CD pipelines, monitoring, security best practices
@@ -59,7 +59,7 @@ A modern, responsive portfolio showcasing my journey as an **AI-First Full-Stack
 ## 🚀 Featured Projects
 
 ### 🤖 Megaphoton - AI Solar Assistant
-**Bilingual conversational assistant powered by Google Gemini 1.5-Flash**
+**Bilingual conversational assistant powered by Google Gemini 2.5-Flash**
 - 🧠 RAG pipeline with knowledge base verification
 - 💬 WhatsApp escalation for human handoff
 - 🌍 Bilingual support (PT/EN) with auto-detection

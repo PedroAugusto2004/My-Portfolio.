@@ -43,14 +43,14 @@ export interface ExperienceEntry {
 
 export const resumeData = {
   name: "Pedro Augusto",
-  title: "Full-Stack Developer | Web & App Development Specialist",
+  title: "Software Engineer | Web & App Development Specialist",
   contact: {
     email: "pedro.augsuto07.dev@gmail.com",
     linkedin: "https://www.linkedin.com/in/pedro-augusto-cabral-oliveira/",
     github: "https://github.com/PedroAugusto2004", 
     portfolioUrl: "", // This website, will be populated dynamically if needed
   },
-  summary: "AI-first Full-Stack Engineer — shipped production LLM agents & RAG systems (Google Gemini, Vercel/AWS). Deployed Google Gemini 1.5-Flash chat flows, serverless ML APIs, and CI/CD-hardened deployments (AWS, Vercel). Focused on verifiable, observable AI features and reducing hallucination through KB + verification layers.",
+  summary: "I’m a Software Engineer specialized in full stack development and AI. I design, build, and deploy scalable web and mobile applications, develop AI-powered solutions, and optimize machine learning models for real-world performance. My expertise spans end-to-end system architecture, rapid prototyping, API development, cloud deployment, and implementing AI workflows from experimentation to production.",
   education: [
     {
       degree: "B.S. in Analysis and Systems Development",
@@ -144,14 +144,14 @@ export const resumeData = {
       role: "Full Stack Developer",
       company: "Megaphoton – Solar Energy",
       period: "Remote • 2025",
-      description: "Bilingual conversational assistant powered by Google Gemini 1.5-Flash with RAG pipeline and WhatsApp escalation for solar energy company.",
+      description: "Bilingual conversational assistant powered by Google Gemini 2.5-Flash with RAG pipeline and WhatsApp escalation for solar energy company.",
       responsibilities: [
-        "Implemented a bilingual (PT/EN) conversational assistant powered by Google Gemini 1.5-Flash, with language detection and persistent context.",
+        "Implemented a bilingual (PT/EN) conversational assistant powered by Google Gemini 2.5-Flash, with language detection and persistent context.",
         "Built a RAG pipeline + knowledge base and verification layers to minimize hallucinations and ensure company-data correctness.",
         "Implemented WhatsApp escalation for human handoff and quick-action flows for common requests; improved customer self-service by 25%.",
         "Production deployment: Vercel serverless functions, env-secure API integration, rate-limit planning, robust fallback/error handling, mobile-optimized UX (React + TypeScript + Framer Motion + Tailwind)."
       ],
-      technologies: ["Google Gemini 1.5-Flash", "Vercel", "React", "TypeScript", "Framer Motion", "Tailwind", "RAG Pipeline", "WhatsApp API"],
+      technologies: ["Google Gemini 2.5-Flash", "Vercel", "React", "TypeScript", "Framer Motion", "Tailwind", "RAG Pipeline", "WhatsApp API"],
       projectLinks: [
         { name: "Megaphoton GitHub", url: "https://github.com/PedroAugusto2004/megaphoton" },
         { name: "Visit Megaphoton", url: "https://www.megaphoton.com.br/" }]
