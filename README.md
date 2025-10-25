@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # 🚀 Pedro Augusto - AI-First Full-Stack Developer Portfolio
 
 <div align="center">
