@@ -141,6 +141,26 @@ export const resumeData = {
       projectLinks: []
     },
     {
+      role: "Full Stack Engineer",
+      company: "StudyShield",
+      period: "2025",
+      description: "Architected and implemented StudyShield, an AI-powered PWA using React 18, TypeScript and Vite; delivered a responsive, installable web app with offline support and service-worker versioning.",
+      responsibilities: [
+        "Designed and shipped a dual-mode AI platform integrating Google Gemini (Flash online + Nano offline) with streaming responses and automatic failover to ensure low latency and offline resilience.",
+        "Integrated Supabase for Auth, PostgreSQL and Storage; authored DB migrations and Row-Level Security policies and designed user_profiles and conversations schemas to enforce per-user data isolation.",
+        "Built secure multimodal chat: file attachments (images/PDFs via pdfjs), voice input (Web Speech API), content sanitization (DOMPurify) and AI content filtering to protect users.",
+        "Implemented Focus Mode and distraction-blocking UX to increase study session productivity; added gamified progress tracking and analytics dashboards (Recharts) to boost engagement.",
+        "Enforced engineering quality: strict TypeScript, ESLint, structured project layout (services/integrations/hooks), CI/deploy readiness (Vercel), and performance tuning targeting Lighthouse/Core Web Vitals.",
+        "Implemented internationalization (react-i18next), accessible UI primitives (Radix), and smooth interactions (Framer Motion) to ship an inclusive, production-grade frontend experience.",
+        "Automated build pipeline improvements (prebuild script to bump service worker version, optimized code-splitting) to reduce bundle size and improve perceived performance."
+      ],
+      technologies: ["React", "TypeScript", "Vite", "Tailwind CSS", "Radix UI", "Framer Motion", "Google Generative AI (Gemini)", "Supabase (Auth/Postgres/Storage)", "PWA (Service Worker)", "react-i18next", "pdfjs", "Web Speech API", "ESLint", "PostCSS", "Recharts"],
+      projectLinks: [
+        { name: "StudyShield GitHub", url: "https://github.com/PedroAugusto2004/StudyShield" },
+        { name: "Visit StudyShield", url: "https://www.studyshield.site/" }
+      ]
+    },
+    {
       role: "Full Stack Developer",
       company: "Megaphoton – Solar Energy",
       period: "Remote • 2025",
