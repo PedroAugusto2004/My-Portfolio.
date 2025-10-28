@@ -45,7 +45,7 @@ export const resumeData = {
   name: "Pedro Augusto",
   title: "Software Engineer | Web & App Development Specialist",
   contact: {
-    email: "pedro.augsuto07.dev@gmail.com",
+    email: "pedro.augusto.software@gmail.com",
     linkedin: "https://www.linkedin.com/in/pedro-augusto-cabral-oliveira/",
     github: "https://github.com/PedroAugusto2004", 
     portfolioUrl: "", // This website, will be populated dynamically if needed

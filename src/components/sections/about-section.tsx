@@ -128,6 +128,39 @@ export default function AboutSection() {
                               </Dialog>
                             </div>
                           )}
+                          {cert.name === "CS50C: Introduction to Cybersecurity" && (
+                            <div className="mt-2 pl-7">
+                              <Dialog>
+                                <DialogTrigger asChild>
+                                  <button aria-label={`View ${cert.name} Certificate`} className="outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded">
+                                    <Image
+                                      src="/images/CS50 Cybersecurity.png"
+                                      alt={`${cert.name} Thumbnail`}
+                                      width={150}
+                                      height={106}
+                                      className="rounded shadow-md cursor-pointer hover:opacity-80 transition-opacity transform hover:scale-105"
+                                      data-ai-hint="certificate document"
+                                    />
+                                  </button>
+                                </DialogTrigger>
+                                <DialogContent className="max-w-3xl p-1 sm:p-2 md:p-3 bg-background overflow-auto">
+                                  <DialogHeader className="sr-only">
+                                    <DialogTitle>{cert.name} Certificate</DialogTitle>
+                                    <DialogDescription>
+                                      Expanded view of {resumeData.name}'s {cert.name} Certificate of Completion from {cert.issuer}.
+                                    </DialogDescription>
+                                  </DialogHeader>
+                                  <Image
+                                    src="/images/CS50 Cybersecurity.png"
+                                    alt={`${cert.name} - ${resumeData.name}`}
+                                    width={1200}
+                                    height={849}
+                                    className="rounded-md w-full h-auto"
+                                  />
+                                </DialogContent>
+                              </Dialog>
+                            </div>
+                          )}
                            {cert.name === "Front End Development Certification" && (
                             <div className="mt-2 pl-7">
                               <Dialog>
