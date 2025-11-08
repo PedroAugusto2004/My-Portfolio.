@@ -128,16 +128,16 @@ export const resumeData = {
   ] as SkillCategory[],
   experience: [
     {
-      role: "AI Developer",
+      role: "Software Engineer",
       company: "Outlier",
       period: "Remote • 2025 – Present",
-      description: "LLM-powered agents and production prompt engineering with automated testing pipelines and serverless ML APIs.",
+      description: "Software Engineer focused on productionizing ML and AI-driven features: building LLM-powered agents, serverless ML APIs, and automated testing & deployment pipelines.",
       responsibilities: [
-        "Built and fine-tuned LLM-powered agents (ChatGPT, Claude-Sonnet, Amazon Q) and production prompt engineering flows, improving output relevance and consistency.",
-        "Designed AI-driven testing pipelines and automated test-case generation, increasing automated coverage and reducing manual QA cycles.",
-        "Deployed a serverless ML churn-prediction API (Python, scikit-learn, AWS Lambda) with telemetry and automated evaluation for production monitoring."
+        "Engineered and productionized LLM-powered agents (ChatGPT, Claude-Sonnet, Amazon Q), improving reliability and response relevance through robust prompt orchestration and monitoring.",
+        "Built automated testing and CI/CD pipelines for AI features, including automated test-case generation and integration tests to increase coverage and reduce regressions.",
+        "Deployed serverless ML APIs (Python, scikit-learn on AWS Lambda) with telemetry, automated evaluation, and alerting to ensure production observability and reliability."
       ],
-      technologies: ["ChatGPT", "Claude-Sonnet", "Amazon Q", "Python", "scikit-learn", "AWS Lambda", "LLM Prompt Engineering"],
+      technologies: ["Python", "scikit-learn", "AWS Lambda", "ChatGPT", "Claude-Sonnet", "Amazon Q", "CI/CD", "Telemetry"],
       projectLinks: []
     },
     {
