@@ -15,6 +15,7 @@ import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
 import { resumeData } from '@/config/resume-data';
 import { Mail, Linkedin, Github, Send, Loader2 } from 'lucide-react';
+import { WhatsAppIcon } from '@/components/ui/whatsapp-icon';
 import Link from 'next/link';
 
 const contactFormSchema = z.object({
@@ -126,6 +127,10 @@ export default function ContactSection() {
                 Alternatively, you can reach me through the following channels:
               </p>
               <div className="space-y-4">
+                <Link href={`https://wa.me/${resumeData.contact.whatsapp.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 group hover:text-primary transition-colors">
+                  <WhatsAppIcon className="h-6 w-6 text-primary" />
+                  <span className="text-foreground group-hover:text-primary transition-colors">WhatsApp</span>
+                </Link>
                 <Link href={`mailto:${resumeData.contact.email}`} className="flex items-center gap-3 group hover:text-primary transition-colors">
                   <Mail className="h-6 w-6 text-primary" />
                   <span className="text-foreground group-hover:text-primary transition-colors">{resumeData.contact.email}</span>

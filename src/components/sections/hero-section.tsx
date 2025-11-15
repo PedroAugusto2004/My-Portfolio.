@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { resumeData } from '@/config/resume-data';
 import { Github, Linkedin, Mail, FileText } from 'lucide-react';
+import { WhatsAppIcon } from '@/components/ui/whatsapp-icon';
 import AnimatedScrollWrapper from '@/components/ui/animated-scroll-wrapper';
 import AnimatedSignature from '@/components/ui/animated-signature';
 
@@ -40,6 +41,11 @@ export default function HeroSection() {
         </AnimatedScrollWrapper>
 
         <AnimatedScrollWrapper animationClassName="animate-fade-in-up" delay="delay-400" className="mt-12 flex justify-center space-x-6">
+          {resumeData.contact.whatsapp && (
+            <Link href={`https://wa.me/${resumeData.contact.whatsapp.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="text-muted-foreground hover:text-primary transition-colors hover:scale-110 transform">
+              <WhatsAppIcon className="h-7 w-7" />
+            </Link>
+          )}
           {resumeData.contact.github && (
             <Link href={resumeData.contact.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" className="text-muted-foreground hover:text-primary transition-colors hover:scale-110 transform">
               <Github className="h-7 w-7" />

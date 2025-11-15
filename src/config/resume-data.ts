@@ -47,7 +47,8 @@ export const resumeData = {
   contact: {
     email: "pedro.augusto.software@gmail.com",
     linkedin: "https://www.linkedin.com/in/pedro-augusto-cabral-oliveira/",
-    github: "https://github.com/PedroAugusto2004", 
+    github: "https://github.com/PedroAugusto2004",
+    whatsapp: "+55 34 99281-5713",
     portfolioUrl: "", // This website, will be populated dynamically if needed
   },
   summary: "I’m a Software Engineer specialized in full stack development and AI. I design, build, and deploy scalable web and mobile applications, develop AI-powered solutions, and optimize machine learning models for real-world performance. My expertise spans end-to-end system architecture, rapid prototyping, API development, cloud deployment, and implementing AI workflows from experimentation to production.",
