@@ -129,10 +129,10 @@ export const resumeData = {
   ] as SkillCategory[],
   experience: [
     {
-      role: "Software Engineer",
+      role: "Machine Learning Data Specialist",
       company: "Outlier",
       period: "Remote • 2025 – Present",
-      description: "Software Engineer focused on productionizing ML and AI-driven features: building LLM-powered agents, serverless ML APIs, and automated testing & deployment pipelines.",
+      description: "As an Machine Learning Data Specialist at Outlier, I analyze and refine AI prompts to enhance model performance. My responsibilities include training AI systems, analyzing their outputs, and improving the quality of AI-generated content. I also identify and correct errors in user prompts to ensure the highest accuracy and efficiency.",
       responsibilities: [
         "Engineered and productionized LLM-powered agents (ChatGPT, Claude-Sonnet, Amazon Q), improving reliability and response relevance through robust prompt orchestration and monitoring.",
         "Built automated testing and CI/CD pipelines for AI features, including automated test-case generation and integration tests to increase coverage and reduce regressions.",
