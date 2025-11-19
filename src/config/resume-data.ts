@@ -139,7 +139,6 @@ export const resumeData = {
         "Identified patterns in model failures and edge cases, providing insights that improved overall evaluation accuracy.",
         "Applied a structured review method to maintain consistency across tasks and enhance alignment with project guidelines."
       ],
-      technologies: ["Python", "scikit-learn", "AWS Lambda", "ChatGPT", "Claude-Sonnet", "Amazon Q", "CI/CD", "Telemetry"],
       projectLinks: []
     },
     {
