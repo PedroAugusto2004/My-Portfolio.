@@ -134,9 +134,10 @@ export const resumeData = {
       period: "Remote • 2025 – Present",
       description: "As an Machine Learning Data Specialist at Outlier, I analyze and refine AI prompts to enhance model performance. My responsibilities include training AI systems, analyzing their outputs, and improving the quality of AI-generated content. I also identify and correct errors in user prompts to ensure the highest accuracy and efficiency.",
       responsibilities: [
-        "Engineered and productionized LLM-powered agents (ChatGPT, Claude-Sonnet, Amazon Q), improving reliability and response relevance through robust prompt orchestration and monitoring.",
-        "Built automated testing and CI/CD pipelines for AI features, including automated test-case generation and integration tests to increase coverage and reduce regressions.",
-        "Deployed serverless ML APIs (Python, scikit-learn on AWS Lambda) with telemetry, automated evaluation, and alerting to ensure production observability and reliability."
+        "Analyzed and evaluated LLM outputs across reasoning, code, and prompt-based tasks to improve model performance.",
+        "Refined and corrected AI prompts to increase clarity, reduce model errors, and ensure high-quality outputs.",
+        "Identified patterns in model failures and edge cases, providing insights that improved overall evaluation accuracy.",
+        "Applied a structured review method to maintain consistency across tasks and enhance alignment with project guidelines."
       ],
       technologies: ["Python", "scikit-learn", "AWS Lambda", "ChatGPT", "Claude-Sonnet", "Amazon Q", "CI/CD", "Telemetry"],
       projectLinks: []

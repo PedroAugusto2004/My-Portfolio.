@@ -122,13 +122,13 @@ export default function ExperienceSection() {
                             const imgSrc = getImageForCompany(exp.company);
                             if (!imgSrc) return null;
                             return (
-                              <div className="lg:hidden relative h-64 sm:h-80 rounded-2xl overflow-hidden my-6">
+                              <div className="lg:hidden relative h-64 sm:h-80 rounded-2xl overflow-hidden my-6 shadow-lg ring-1 ring-black/10">
                                 <Image
                                   src={imgSrc}
                                   alt={`${exp.company} showcase`}
                                   fill
                                   quality={90}
-                                  className="object-cover"
+                                  className="object-cover shadow-lg"
                                   sizes="(max-width: 1023px) 100vw, 0"
                                 />
                               </div>
@@ -151,13 +151,13 @@ export default function ExperienceSection() {
                           const imgSrc = getImageForCompany(exp.company);
                           if (!imgSrc) return null;
                           return (
-                            <div className={`hidden lg:block order-2 ${index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'} relative h-96 rounded-2xl overflow-hidden mt-12`}>
+                            <div className={`hidden lg:block order-2 ${index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'} relative h-96 rounded-2xl overflow-hidden mt-12 shadow-lg ring-1 ring-black/10`}>
                               <Image
                                 src={imgSrc}
                                 alt={`${exp.company} showcase`}
                                 fill
                                 quality={90}
-                                className="object-cover"
+                                className="object-cover shadow-lg"
                                 sizes="50vw"
                               />
                             </div>
