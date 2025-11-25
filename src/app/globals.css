@@ -4,8 +4,10 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%; /* White */
-    --foreground: 240 10% 3.9%; /* Dark Gray */
+    --background: 0 0% 100%;
+    /* White */
+    --foreground: 240 10% 3.9%;
+    /* Dark Gray */
 
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
@@ -13,24 +15,34 @@
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
 
-    --primary: 220 60% 55%; /* Neutral Blue */
-    --primary-foreground: 0 0% 100%; /* White */
+    --primary: 220 60% 55%;
+    /* Neutral Blue */
+    --primary-foreground: 0 0% 100%;
+    /* White */
 
-    --secondary: 240 4.8% 95.9%; /* Light Gray - for secondary elements */
-    --secondary-foreground: 240 5.9% 10%; /* Dark Gray - for text on secondary */
+    --secondary: 240 4.8% 95.9%;
+    /* Light Gray - for secondary elements */
+    --secondary-foreground: 240 5.9% 10%;
+    /* Dark Gray - for text on secondary */
 
     --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%; /* Mid Gray - for muted text */
+    --muted-foreground: 240 3.8% 46.1%;
+    /* Mid Gray - for muted text */
 
-    --accent: 220 50% 94%; /* Very Light Neutral Blue/Gray */
-    --accent-foreground: 220 60% 45%; /* Darker Neutral Blue */
+    --accent: 220 50% 94%;
+    /* Very Light Neutral Blue/Gray */
+    --accent-foreground: 220 60% 45%;
+    /* Darker Neutral Blue */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 5.9% 90%; /* Light Gray border */
-    --input: 240 5.9% 90%; /* Light Gray input background */
-    --ring: 220 60% 55%; /* Neutral Blue */
+    --border: 240 5.9% 90%;
+    /* Light Gray border */
+    --input: 240 5.9% 90%;
+    /* Light Gray input background */
+    --ring: 220 60% 55%;
+    /* Neutral Blue */
 
     --radius: 0.5rem;
 
@@ -46,19 +58,22 @@
 
     /* Futuristic Background Variables for Light Mode */
     --futuristic-bg-angle-scroll: 145deg;
-    --futuristic-color-1-h: 220; /* Muted Blueish */
+    --futuristic-color-1-h: 220;
+    /* Muted Blueish */
     --futuristic-color-1-s: 30%;
     --futuristic-color-1-l-light: 96%;
     --futuristic-color-1-l-dark: 8%;
     --futuristic-color-1-a: 0.5;
 
-    --futuristic-color-2-h: 240; /* Muted Indigo/Purple */
+    --futuristic-color-2-h: 240;
+    /* Muted Indigo/Purple */
     --futuristic-color-2-s: 25%;
     --futuristic-color-2-l-light: 98%;
     --futuristic-color-2-l-dark: 5%;
     --futuristic-color-2-a: 0.4;
 
-    --futuristic-color-3-h: 200; /* Muted Cyan/Steel Blue */
+    --futuristic-color-3-h: 200;
+    /* Muted Cyan/Steel Blue */
     --futuristic-color-3-s: 25%;
     --futuristic-color-3-l-light: 97%;
     --futuristic-color-3-l-dark: 7%;
@@ -67,36 +82,52 @@
     --current-futuristic-color-1-l: var(--futuristic-color-1-l-light);
     --current-futuristic-color-2-l: var(--futuristic-color-2-l-light);
     --current-futuristic-color-3-l: var(--futuristic-color-3-l-light);
+    --dot-color: rgba(0, 0, 0, 0.1);
   }
 
   .dark {
-    --background: 220 15% 15%; /* Very Dark Bluish Gray */
-    --foreground: 220 30% 85%; /* Light Bluish Gray */
+    --background: 220 15% 15%;
+    /* Very Dark Bluish Gray */
+    --foreground: 220 30% 85%;
+    /* Light Bluish Gray */
 
-    --card: 220 15% 20%; /* Increased lightness for better contrast */
-    --card-foreground: 220 30% 90%; /* Adjusted for new card background */
+    --card: 220 15% 20%;
+    /* Increased lightness for better contrast */
+    --card-foreground: 220 30% 90%;
+    /* Adjusted for new card background */
 
-    --popover: 220 15% 12%; /* Darker for popovers */
+    --popover: 220 15% 12%;
+    /* Darker for popovers */
     --popover-foreground: 220 30% 90%;
 
-    --primary: 220 55% 70%; /* Slightly Brighter Neutral Blue for Dark */
-    --primary-foreground: 0 0% 100%; /* White */
+    --primary: 220 55% 70%;
+    /* Slightly Brighter Neutral Blue for Dark */
+    --primary-foreground: 0 0% 100%;
+    /* White */
 
-    --secondary: 220 15% 25%; /* Dark Gray for secondary elements */
-    --secondary-foreground: 220 30% 80%; 
+    --secondary: 220 15% 25%;
+    /* Dark Gray for secondary elements */
+    --secondary-foreground: 220 30% 80%;
 
     --muted: 220 15% 25%;
-    --muted-foreground: 220 20% 60%; /* Mid Gray for muted text */
+    --muted-foreground: 220 20% 60%;
+    /* Mid Gray for muted text */
 
-    --accent: 220 25% 30%; /* Darker Muted Neutral Blue */
-    --accent-foreground: 220 50% 85%; /* Light Muted Neutral Blue */
+    --accent: 220 25% 30%;
+    /* Darker Muted Neutral Blue */
+    --accent-foreground: 220 50% 85%;
+    /* Light Muted Neutral Blue */
 
-    --destructive: 0 70% 50%; /* Adjusted for dark mode */
+    --destructive: 0 70% 50%;
+    /* Adjusted for dark mode */
     --destructive-foreground: 0 0% 98%;
 
-    --border: 220 15% 30%; /* Dark Gray border */
-    --input: 220 15% 28%; /* Dark Gray input background */
-    --ring: 220 55% 70%; /* Slightly Brighter Neutral Blue for Dark */
+    --border: 220 15% 30%;
+    /* Dark Gray border */
+    --input: 220 15% 28%;
+    /* Dark Gray input background */
+    --ring: 220 55% 70%;
+    /* Slightly Brighter Neutral Blue for Dark */
 
     /* Sidebar specific colors - will inherit from the main theme */
     --sidebar-background: var(--background);
@@ -112,6 +143,7 @@
     --current-futuristic-color-1-l: var(--futuristic-color-1-l-dark);
     --current-futuristic-color-2-l: var(--futuristic-color-2-l-dark);
     --current-futuristic-color-3-l: var(--futuristic-color-3-l-dark);
+    --dot-color: rgba(255, 255, 255, 0.1);
   }
 }
 
@@ -119,43 +151,82 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply font-sans text-foreground;
     @apply antialiased;
-    
-    background: linear-gradient(
-      var(--futuristic-bg-angle-scroll),
-      hsla(var(--futuristic-color-1-h), var(--futuristic-color-1-s), var(--current-futuristic-color-1-l), var(--futuristic-color-1-a)) 0%,
-      hsla(var(--futuristic-color-2-h), var(--futuristic-color-2-s), var(--current-futuristic-color-2-l), var(--futuristic-color-2-a)) 50%,
-      hsla(var(--futuristic-color-3-h), var(--futuristic-color-3-s), var(--current-futuristic-color-3-l), var(--futuristic-color-3-a)) 100%
-    );
+    isolation: isolate;
+
+    background: linear-gradient(var(--futuristic-bg-angle-scroll),
+        hsla(var(--futuristic-color-1-h), var(--futuristic-color-1-s), var(--current-futuristic-color-1-l), var(--futuristic-color-1-a)) 0%,
+        hsla(var(--futuristic-color-2-h), var(--futuristic-color-2-s), var(--current-futuristic-color-2-l), var(--futuristic-color-2-a)) 50%,
+        hsla(var(--futuristic-color-3-h), var(--futuristic-color-3-s), var(--current-futuristic-color-3-l), var(--futuristic-color-3-a)) 100%);
     background-size: 300% 300%;
     animation: futuristicBodyAnim 25s ease infinite alternate;
     min-height: 100vh;
-    transition: background 0.5s ease-out; /* Smooth transition for color changes */
+    transition: background 0.5s ease-out;
+    /* Smooth transition for color changes */
   }
 
-  .dark body {
-    /* CSS variables for dark mode are already set above, body will re-evaluate gradient */
+
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image: radial-gradient(circle, var(--dot-color) 1px, transparent 1px);
+    background-size: 24px 24px;
+    pointer-events: none;
   }
 
   @keyframes futuristicBodyAnim {
-    0% { background-position: 0% 0%; }
-    25% { background-position: 100% 0%; }
-    50% { background-position: 100% 100%; }
-    75% { background-position: 0% 100%; }
-    100% { background-position: 0% 0%; }
+    0% {
+      background-position: 0% 0%;
+    }
+
+    25% {
+      background-position: 100% 0%;
+    }
+
+    50% {
+      background-position: 100% 100%;
+    }
+
+    75% {
+      background-position: 0% 100%;
+    }
+
+    100% {
+      background-position: 0% 0%;
+    }
   }
 
   section {
-    @apply w-full py-12 md:py-20 lg:py-24 bg-transparent; /* Make sections transparent */
+    @apply w-full py-12 md:py-20 lg:py-24 bg-transparent;
+    /* Make sections transparent */
   }
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-heading tracking-tight font-semibold; 
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading tracking-tight font-semibold;
   }
-  h1 { @apply text-4xl sm:text-5xl md:text-6xl; }
-  h2 { @apply text-3xl md:text-4xl; }
-  h3 { @apply text-2xl md:text-3xl; }
+
+  h1 {
+    @apply text-4xl sm:text-5xl md:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
 
   .section-title {
     @apply text-3xl font-bold tracking-tight text-primary sm:text-4xl md:text-5xl;
@@ -164,7 +235,8 @@
   .hero-header {
     font-family: var(--font-lato), 'Lato', Arial, sans-serif;
     font-weight: 500;
-    color: #385e92; /* Cobalt blue */
+    color: #385e92;
+    /* Cobalt blue */
     letter-spacing: -0.01em;
     line-height: 1.1;
     background: none;
@@ -175,7 +247,8 @@
   .navbar-header {
     font-family: var(--font-lato), 'Lato', Arial, sans-serif;
     font-weight: 400;
-    color: #4069a1; /* Cobalt blue */
+    color: #4069a1;
+    /* Cobalt blue */
     letter-spacing: -0.01em;
     line-height: 1.1;
     background: none;
@@ -188,7 +261,7 @@
     font-family: var(--font-playfair-display), 'Playfair Display', serif;
     font-weight: 700;
     letter-spacing: 0.01em;
-    color: #385e92; 
+    color: #385e92;
     font-style: normal;
   }
 
@@ -200,6 +273,7 @@
     margin: 0 auto;
     color: #000;
   }
+
   .dark .animated-signature {
     color: #fff;
   }
@@ -210,6 +284,7 @@
     opacity: 0;
     animation: fadeIn 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   }
+
   @keyframes fadeIn {
     to {
       opacity: 1;

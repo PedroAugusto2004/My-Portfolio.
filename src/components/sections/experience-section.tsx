@@ -9,6 +9,56 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 
+const ProjectShowcase = ({ src, alt, link }: { src: string; alt: string; link?: string }) => {
+  return (
+    <div className="group relative rounded-xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 shadow-2xl transition-all duration-300 hover:shadow-primary/25 hover:-translate-y-1">
+      {/* Browser Header */}
+      <div className="flex items-center gap-2 px-4 py-3 bg-gray-50/90 dark:bg-gray-800/90 border-b border-gray-200/50 dark:border-gray-700/50 backdrop-blur-md z-10 relative">
+        <div className="flex gap-1.5">
+          <div className="w-3 h-3 rounded-full bg-red-500/80 shadow-sm" />
+          <div className="w-3 h-3 rounded-full bg-yellow-500/80 shadow-sm" />
+          <div className="w-3 h-3 rounded-full bg-green-500/80 shadow-sm" />
+        </div>
+        {/* Address Bar */}
+        <div className="ml-4 flex-1 h-6 rounded-md bg-white/50 dark:bg-gray-900/50 border border-gray-200/50 dark:border-gray-700/50 flex items-center px-3">
+          <div className="w-2 h-2 rounded-full border border-gray-400 dark:border-gray-500 mr-2 opacity-50" />
+          <span className="text-[10px] text-gray-500 dark:text-gray-400 font-mono truncate max-w-[150px] sm:max-w-[200px]">
+            {link ? new URL(link).hostname : 'localhost:3000'}
+          </span>
+        </div>
+      </div>
+
+      {/* Image Area */}
+      <div className="relative aspect-video w-full overflow-hidden bg-gray-100 dark:bg-gray-900">
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          quality={95}
+          className="object-cover object-[50%_85%] transition-transform duration-700 ease-out group-hover:scale-105"
+          sizes="(max-width: 768px) 100vw, 50vw"
+        />
+
+        {/* Hover Overlay */}
+        {link && (
+          <Link
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute inset-0 flex items-center justify-center bg-white/40 dark:bg-black/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-300"
+          >
+            <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+              <span className="inline-flex items-center gap-2 px-5 py-2 bg-gray-900/95 dark:bg-white/95 hover:bg-gray-900 dark:hover:bg-white text-white dark:text-gray-900 rounded-full font-medium text-sm shadow-lg transition-colors">
+                Visit Website <ExternalLink className="w-3.5 h-3.5" />
+              </span>
+            </div>
+          </Link>
+        )}
+      </div>
+    </div>
+  );
+};
+
 export default function ExperienceSection() {
   const imageMap: Record<string, string> = {
     'StudyShield': '/images/studyshield.png',
@@ -23,6 +73,10 @@ export default function ExperienceSection() {
     if (company.toLowerCase().includes('medimentor') || company.toLowerCase().includes('medimentor')) return imageMap['MediMentor'];
     if (company.toLowerCase().includes('muscles')) return imageMap['Muscles & Balance'];
     return '';
+  };
+
+  const getVisitLink = (links?: { name: string; url: string }[]) => {
+    return links?.find(l => l.name.toLowerCase().includes('visit'))?.url;
   };
   return (
     <section id="experience" className="bg-transparent py-16 sm:py-20">
@@ -79,13 +133,13 @@ export default function ExperienceSection() {
                           {exp.projectLinks.map((link, linkIndex) => {
                             const isGithubLink = link.name.toLowerCase().includes('github');
                             const isVisitLink = link.name.toLowerCase().includes('visit');
-                            
+
                             return (
-                              <Button 
-                                asChild 
-                                variant={isVisitLink ? "default" : "outline"} 
-                                size="sm" 
-                                key={linkIndex} 
+                              <Button
+                                asChild
+                                variant={isVisitLink ? "default" : "outline"}
+                                size="sm"
+                                key={linkIndex}
                                 className={isVisitLink ? "bg-primary hover:bg-primary/90 text-white shadow-md" : "hover:bg-accent/80"}
                               >
                                 <Link href={link.url} target="_blank" rel="noopener noreferrer" aria-label={`${link.name}`}>
@@ -118,18 +172,17 @@ export default function ExperienceSection() {
                           <p className="text-foreground/80 mb-6 leading-relaxed">{exp.description}</p>
 
                           {/* Image for mobile, shown after description */}
+                          {/* Image for mobile, shown after description */}
                           {(() => {
                             const imgSrc = getImageForCompany(exp.company);
+                            const visitLink = getVisitLink(exp.projectLinks);
                             if (!imgSrc) return null;
                             return (
-                              <div className="lg:hidden relative h-64 sm:h-80 rounded-2xl overflow-hidden my-6 shadow-lg ring-1 ring-black/10">
-                                <Image
+                              <div className="lg:hidden my-8">
+                                <ProjectShowcase
                                   src={imgSrc}
                                   alt={`${exp.company} showcase`}
-                                  fill
-                                  quality={90}
-                                  className="object-cover shadow-lg"
-                                  sizes="(max-width: 1023px) 100vw, 0"
+                                  link={visitLink}
                                 />
                               </div>
                             );
@@ -147,18 +200,17 @@ export default function ExperienceSection() {
                         </div>
 
                         {/* Image for desktop */}
+                        {/* Image for desktop */}
                         {(() => {
                           const imgSrc = getImageForCompany(exp.company);
+                          const visitLink = getVisitLink(exp.projectLinks);
                           if (!imgSrc) return null;
                           return (
-                            <div className={`hidden lg:block order-2 ${index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'} relative h-96 rounded-2xl overflow-hidden mt-12 shadow-lg ring-1 ring-black/10`}>
-                              <Image
+                            <div className={`hidden lg:block order-2 ${index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'} mt-2`}>
+                              <ProjectShowcase
                                 src={imgSrc}
                                 alt={`${exp.company} showcase`}
-                                fill
-                                quality={90}
-                                className="object-cover shadow-lg"
-                                sizes="50vw"
+                                link={visitLink}
                               />
                             </div>
                           );
@@ -190,13 +242,13 @@ export default function ExperienceSection() {
                                   {exp.projectLinks.map((link, linkIndex) => {
                                     const isGithubLink = link.name.toLowerCase().includes('github');
                                     const isVisitLink = link.name.toLowerCase().includes('visit');
-                                    
+
                                     return (
-                                      <Button 
-                                        asChild 
-                                        variant={isVisitLink ? "default" : "outline"} 
-                                        size="sm" 
-                                        key={linkIndex} 
+                                      <Button
+                                        asChild
+                                        variant={isVisitLink ? "default" : "outline"}
+                                        size="sm"
+                                        key={linkIndex}
                                         className={isVisitLink ? "bg-primary hover:bg-primary/90 text-white shadow-md" : "hover:bg-accent/80"}
                                       >
                                         <Link href={link.url} target="_blank" rel="noopener noreferrer" aria-label={`${link.name}`}>
