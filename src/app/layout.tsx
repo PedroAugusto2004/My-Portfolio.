@@ -6,6 +6,7 @@ import Navbar from '@/components/layout/navbar';
 import Footer from '@/components/layout/footer';
 import { ThemeProvider } from '@/components/theme-provider';
 import ScrollReactiveBackground from '@/components/layout/scroll-reactive-background';
+import CursorLightBackground from '@/components/ui/cursor-light-background';
 import { ThemeToggle } from '@/components/theme-toggle';
 
 
@@ -33,6 +34,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <ScrollReactiveBackground />
+          <CursorLightBackground />
           <Navbar />
           <main vaul-drawer-wrapper="" className="min-h-screen flex-1 bg-transparent">{children}</main>
           <Footer />
