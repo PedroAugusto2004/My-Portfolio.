@@ -62,7 +62,7 @@ export default function Navbar() {
 										<span className={`navbar-header fancy-header ${playfairDisplay.variable} animate-fade-in`}>{resumeData.name}</span>
 									</Link>
 								</div>
-								<div className="absolute right-4 top-4">
+								<div className="absolute right-4 sm:right-6 top-2">
 									<Hamburger isOpen={true} onClick={() => setMobileMenuOpen(false)} aria-label="Close menu" />
 								</div>
 								<SheetTitle className="sr-only">Mobile Menu</SheetTitle>
