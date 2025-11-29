@@ -13,7 +13,7 @@ export default function AboutSection() {
         <AnimatedScrollWrapper animationClassName="animate-fade-in-up">
           <SectionTitle>About Me</SectionTitle>
         </AnimatedScrollWrapper>
-        
+
         <AnimatedScrollWrapper animationClassName="animate-fade-in-up" delay="delay-100">
           <p className="mb-12 text-center text-lg text-muted-foreground md:text-xl">
             {resumeData.summary}
@@ -22,7 +22,7 @@ export default function AboutSection() {
 
         <div className="grid md:grid-cols-1 gap-8">
           <AnimatedScrollWrapper as="div" className="w-full" animationClassName="animate-fade-in-up" delay="delay-200">
-             <Accordion type="multiple" className="w-full rounded-lg border bg-card p-2 shadow-sm">
+            <Accordion type="multiple" className="w-full rounded-lg border bg-card p-2 shadow-sm glass-card">
               {resumeData.education.length > 0 && (
                 <AccordionItem value="education">
                   <AccordionTrigger className="px-4 text-lg font-semibold hover:no-underline data-[state=open]:text-primary">
@@ -47,7 +47,7 @@ export default function AboutSection() {
               {resumeData.certifications.length > 0 && (
                 <AccordionItem value="certifications">
                   <AccordionTrigger className="px-4 text-lg font-semibold hover:no-underline data-[state=open]:text-primary">
-                     <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-3">
                       <CircleCheckBig className="h-6 w-6 text-primary" /> Certifications
                     </div>
                   </AccordionTrigger>
@@ -68,10 +68,10 @@ export default function AboutSection() {
                                 <DialogTrigger asChild>
                                   <button aria-label={`View ${cert.name} Certificate`} className="outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded">
                                     <Image
-                                      src="/images/CS50x.png" 
+                                      src="/images/CS50x.png"
                                       alt={`${cert.name} Thumbnail`}
                                       width={150}
-                                      height={106} 
+                                      height={106}
                                       className="rounded shadow-md cursor-pointer hover:opacity-80 transition-opacity transform hover:scale-105"
                                       data-ai-hint="certificate document"
                                     />
@@ -85,17 +85,17 @@ export default function AboutSection() {
                                     </DialogDescription>
                                   </DialogHeader>
                                   <Image
-                                    src="/images/CS50x.png" 
+                                    src="/images/CS50x.png"
                                     alt={`${cert.name} - ${resumeData.name}`}
-                                    width={1200} 
-                                    height={849} 
+                                    width={1200}
+                                    height={849}
                                     className="rounded-md w-full h-auto"
                                   />
                                 </DialogContent>
                               </Dialog>
                             </div>
                           )}
-                           {cert.name === "CS50AI: Introduction to Artificial Intelligence with Python" && (
+                          {cert.name === "CS50AI: Introduction to Artificial Intelligence with Python" && (
                             <div className="mt-2 pl-7">
                               <Dialog>
                                 <DialogTrigger asChild>
@@ -161,7 +161,7 @@ export default function AboutSection() {
                               </Dialog>
                             </div>
                           )}
-                           {cert.name === "Front End Development Certification" && (
+                          {cert.name === "Front End Development Certification" && (
                             <div className="mt-2 pl-7">
                               <Dialog>
                                 <DialogTrigger asChild>
@@ -194,7 +194,7 @@ export default function AboutSection() {
                               </Dialog>
                             </div>
                           )}
-                           {cert.name === "100+ hours of training" && (
+                          {cert.name === "100+ hours of training" && (
                             <div className="mt-2 pl-7">
                               <Dialog>
                                 <DialogTrigger asChild>
@@ -257,7 +257,7 @@ export default function AboutSection() {
                                 <DialogTrigger asChild>
                                   <button aria-label={`View ${ach.title} Related Image`} className="outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded">
                                     <Image
-                                      src="/images/MediMentor.jpg" 
+                                      src="/images/MediMentor.jpg"
                                       alt={`${ach.title} Thumbnail`}
                                       width={150} // Adjust as needed for thumbnail size
                                       height={106} // Adjust to maintain aspect ratio, or use a square
@@ -274,7 +274,7 @@ export default function AboutSection() {
                                     </DialogDescription>
                                   </DialogHeader>
                                   <Image
-                                    src="/images/MediMentor.jpg" 
+                                    src="/images/MediMentor.jpg"
                                     alt={`${ach.title} - ${resumeData.name}`}
                                     width={1200} // Adjust for desired expanded size
                                     height={800} // Adjust for desired expanded size

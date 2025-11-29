@@ -61,7 +61,7 @@ export default function ContactSection() {
           throw new Error(response.message);
         }
       } catch (error) {
-         toast({
+        toast({
           title: "Error Sending Message",
           description: error instanceof Error ? error.message : "An unexpected error occurred.",
           variant: "destructive",
@@ -93,17 +93,17 @@ export default function ContactSection() {
                 <CardContent className="space-y-4">
                   <div>
                     <Label htmlFor="name">Full Name</Label>
-                    <Input id="name" {...register("name")} placeholder="Your Name" className="mt-1"/>
+                    <Input id="name" {...register("name")} placeholder="Your Name" className="mt-1" />
                     {errors.name && <p className="text-sm text-destructive mt-1">{errors.name.message}</p>}
                   </div>
                   <div>
                     <Label htmlFor="email">Email Address</Label>
-                    <Input id="email" type="email" {...register("email")} placeholder="your.email@example.com" className="mt-1"/>
+                    <Input id="email" type="email" {...register("email")} placeholder="your.email@example.com" className="mt-1" />
                     {errors.email && <p className="text-sm text-destructive mt-1">{errors.email.message}</p>}
                   </div>
                   <div>
                     <Label htmlFor="message">Message</Label>
-                    <Textarea id="message" {...register("message")} rows={5} placeholder="Your message..." className="mt-1"/>
+                    <Textarea id="message" {...register("message")} rows={5} placeholder="Your message..." className="mt-1" />
                     {errors.message && <p className="text-sm text-destructive mt-1">{errors.message.message}</p>}
                   </div>
                 </CardContent>
@@ -144,7 +144,7 @@ export default function ContactSection() {
                   <span className="text-foreground group-hover:text-primary transition-colors">GitHub Profile</span>
                 </Link>
               </div>
-              <div className="mt-6 p-4 border rounded-lg bg-background">
+              <div className="mt-6 p-4 border rounded-lg bg-background glass-effect">
                 <h4 className="font-semibold text-primary mb-2">Preferred Contact Method:</h4>
                 <p className="text-sm text-muted-foreground">
                   Email is generally the quickest way to get a response for inquiries. For professional networking, LinkedIn is also a great option.
